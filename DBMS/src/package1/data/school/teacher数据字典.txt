@@ -1,0 +1,4 @@
+2
+
+teachername string not null
+teacherid long not null primary key
