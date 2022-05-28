@@ -10,5 +10,7 @@ public class jindie {
 //            sb.append(temp);
 //        } while ((value >>>= 3) != 0);
 //        System.out.println(sb.reverse());
+        System.out.println("aa");
+
     }
 }
