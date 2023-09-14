@@ -9,7 +9,7 @@ import schoolcardms.dao.Database;
 import schoolcardms.service.SCUserService;
 import schoolcardms.util.ConstPool;
 
-import static package1.Tool.is;
+import static com.matchacloud.Tool.is;
 
 public class MainUI extends JFrame implements ActionListener, DocumentListener {
 

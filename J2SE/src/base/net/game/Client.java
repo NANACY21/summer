@@ -5,9 +5,6 @@ import java.net.ConnectException;
 import java.net.Socket;
 import java.net.SocketTimeoutException;
 import java.util.Scanner;
-import java.util.Vector;
-
-import static package1.Tool.setFileData;
 
 /**该传输是TCP
  * 该类一个实例 -- 一个客户端

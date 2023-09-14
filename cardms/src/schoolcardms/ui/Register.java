@@ -8,8 +8,8 @@ import javax.swing.*;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 
-import static package1.Tool.is;
-import static package1.Tool.same;
+import static com.matchacloud.Tool.is;
+import static com.matchacloud.Tool.same;
 
 /**
  * 一卡通注册对话框

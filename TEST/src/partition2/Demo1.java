@@ -43,6 +43,7 @@ public class Demo1 {
     public void change(String str, char ch[]) {
         str = "test ok";
         ch[0] = 'g';
+        goto
     }
 
     //实现字符串替换，输入bbbwlirbbb，输出bbbhhtccc

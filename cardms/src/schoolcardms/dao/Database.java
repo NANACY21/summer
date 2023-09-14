@@ -7,7 +7,7 @@ import java.util.*;
 import javax.swing.JComboBox;
 import java.sql.*;
 
-import static package1.Tool.*;
+import static com.matchacloud.Tool.*;
 
 /**
  * dao层

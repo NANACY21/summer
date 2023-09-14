@@ -9,8 +9,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-import static package1.Tool.is;
-import static package1.Tool.same;
+import static com.matchacloud.Tool.is;
+import static com.matchacloud.Tool.same;
 
 /**
  * 银行卡（账户）激活对话框

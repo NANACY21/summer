@@ -1,4 +1,4 @@
-package package1;
+package com.matchacloud;
 
 import java.util.LinkedList;
 import java.util.Scanner;

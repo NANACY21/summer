@@ -1,5 +1,8 @@
 package pit;
 
+import java.math.BigDecimal;
+import java.util.HashMap;
+
 public class Dog {
     private int age;
     private String name;
@@ -27,4 +30,6 @@ public class Dog {
                 ", name='" + name + '\'' +
                 '}';
     }
+
+
 }
