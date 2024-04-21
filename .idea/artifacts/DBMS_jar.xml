@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact name="DBMS:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/DBMS_jar</output-path>
+    <root id="root">
+      <element id="archive" name="DBMS.jar">
+        <element id="module-output" name="DBMS" />
+      </element>
+    </root>
+  </artifact>
+</component>

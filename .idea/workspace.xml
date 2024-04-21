@@ -3,9 +3,100 @@
   <component name="AnalysisUIOptions">
     <option name="GROUP_BY_SEVERITY" value="true" />
   </component>
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="DBMS:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b35f66e-4e88-4cab-9344-32febfff8c02" name="Default Changelist" comment="">
+    <list default="true" id="6b35f66e-4e88-4cab-9344-32febfff8c02" name="Default Changelist" comment="nn">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/DBMS_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/setting.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/J2SE/src/annotation/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/J2SE/src/annotation/BookShelf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/J2SE/src/annotation/Test1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/J2SE/src/base/MessyCode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ACM/note.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ACM/src/hik/A.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2SE/note.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2SE/src/base/note.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2SE/src/dataStructure/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/dataStructure/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2SE/src/dataStructure/TreeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/dataStructure/TreeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2SE/src/jdbc/TestJUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/jdbc/TestJUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2SE/src/juc/ThreadStudy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2SE/src/jvm/A.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST/TEST.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST/note.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST/src/partition1/AA.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST/src/partition1/Gejia.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST/src/partition1/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST/src/partition1/Queue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST/src/partition1/SimpleQueue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST/src/partition2/Demo1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST/src/partition2/Demo2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST/src/partition2/Wangyi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST/src/partition2/ZiJie.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST/src/partition2/jindie.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST/src/partition3/JUC.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST/src/partition3/Volatile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DBMS/package1/ConstPool.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DBMS/package1/DataProcess.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DBMS/package1/Display.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DBMS/package1/Ll.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DBMS/package1/SqlParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DBMS/package1/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DBMS/package1/Tool.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DBMS/package1/data/company/student.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DBMS/package1/data/company/student数据字典.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DBMS/package1/data/powerTable.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DBMS/package1/data/school/kecheng.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DBMS/package1/data/school/kecheng数据字典.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DBMS/package1/data/school/student.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DBMS/package1/data/school/studentindex1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DBMS/package1/data/school/studentindex2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DBMS/package1/data/school/student数据字典.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DBMS/package1/data/school/teacher.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DBMS/package1/data/school/teacher数据字典.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DBMS/package1/data/users.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J2SE/META-INF/J2SE.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/array/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J2SE/base/array/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/io/Demo1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J2SE/base/io/Demo1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/io/Demo2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J2SE/base/io/Demo2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/io/Demo3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J2SE/base/io/Demo3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/io/Demo4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J2SE/base/io/Demo4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/io/imgDownload.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J2SE/base/io/imgDownload.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/net/game/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J2SE/base/net/game/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/net/game/ConstPool.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J2SE/base/net/game/ConstPool.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/net/game/ServerThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J2SE/base/net/game/ServerThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/thread/demo/Create$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/thread/demo/Create.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/thread/demo/Test2$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/thread/demo/Test2$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/thread/demo/Test2$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/thread/demo/Test2$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/thread/demo/Test2$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/thread/demo/Test2$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/thread/demo/Test2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/thread/demo/Test3$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/thread/demo/Test3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/thread/demo/Test4$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/thread/demo/Test4$myRunnable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/thread/demo/Test4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/thread/demo/ThreadPoolTarget.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J2SE/base/thread/demo/ThreadPoolTarget.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/thread/pc/Consumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J2SE/base/thread/pc/Consumer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/thread/pc/Producer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J2SE/base/thread/pc/Producer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/thread/pc/Stack.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J2SE/base/thread/pc/Stack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/thread/pc/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J2SE/base/thread/pc/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J2SE/dataStructure/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J2SE/dataStructure/TreeTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J2SE/jdbc/TestJUnit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J2SE/jvm/A.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J2SE/pit/Dog.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J2SE/pit/Dog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TEST/META-INF/TEST.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TEST/partition1/AA.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TEST/partition1/AA.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TEST/partition2/Demo1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TEST/partition2/Demo1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TEST/partition2/jindie.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TEST/partition2/jindie.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,8 +123,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="AnnotationType" />
         <option value="Interface" />
+        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>
@@ -74,6 +165,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_333.jdk/Contents/Home/src.zip!/java/lang/Thread.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -187,12 +281,14 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/lichi/allproject/self/projects&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/lichi/projectList/self/projects&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+    &quot;project.structure.side.proportion&quot;: &quot;0.3505747&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -207,13 +303,13 @@
       <recent name="D:\大学\大二(上)\JAVA程序设计\IDEA开发的项目\cardmsF\src\bankcardms" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.jindie">
-    <configuration name="Demo2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="base.collection.Demo2" />
-      <module name="J2SE" />
+  <component name="RunManager" selected="Application.Demo1">
+    <configuration name="A" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hik.A" />
+      <module name="ACM" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="base.collection.*" />
+          <option name="PATTERN" value="hik.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -221,60 +317,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Ll" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="package1.Ll" />
-      <module name="DBMS" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="package1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Test (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="package1.Test" />
-      <module name="DBMS" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="package1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="schoolcardms.Test" />
-      <module name="cardms" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="schoolcardms.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="package1.Test" />
-      <module name="DBMS" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="package1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="jindie" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="partition2.jindie" />
+    <configuration name="Demo1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="partition2.Demo1" />
       <module name="TEST" />
       <extension name="coverage">
         <pattern>
@@ -286,13 +330,52 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Dog" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pit.Dog" />
+      <module name="J2SE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="annotation.Test1" />
+      <module name="J2SE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="annotation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.matchacloud.Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.matchacloud.Test" />
+      <module name="DBMS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.matchacloud.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.jindie" />
-        <item itemvalue="Application.Demo2" />
-        <item itemvalue="Application.Test (1)" />
-        <item itemvalue="Application.Test" />
-        <item itemvalue="Application.Ll" />
+        <item itemvalue="Application.Demo1" />
+        <item itemvalue="Application.Test1" />
+        <item itemvalue="Application.com.matchacloud.Test" />
+        <item itemvalue="Application.A" />
+        <item itemvalue="Application.Dog" />
       </list>
     </recent_temporary>
   </component>
@@ -643,7 +726,96 @@
       <workItem from="1574148914353" duration="164000" />
       <workItem from="1653747226745" duration="1936000" />
       <workItem from="1653749933472" duration="1398000" />
+      <workItem from="1657452943078" duration="8627000" />
+      <workItem from="1657717050732" duration="1996000" />
+      <workItem from="1657804364239" duration="473000" />
+      <workItem from="1658144049006" duration="3409000" />
+      <workItem from="1658214219724" duration="2067000" />
+      <workItem from="1658494258821" duration="1460000" />
+      <workItem from="1658642127788" duration="10000" />
+      <workItem from="1658834098319" duration="2853000" />
+      <workItem from="1662005183945" duration="885000" />
+      <workItem from="1663593085104" duration="5000" />
+      <workItem from="1663593094049" duration="852000" />
+      <workItem from="1663648582636" duration="2331000" />
+      <workItem from="1663725332882" duration="971000" />
+      <workItem from="1665281889672" duration="602000" />
+      <workItem from="1665390350658" duration="4000" />
+      <workItem from="1665710164837" duration="3194000" />
+      <workItem from="1666339927446" duration="17000" />
+      <workItem from="1666764240842" duration="4184000" />
+      <workItem from="1666920875586" duration="851000" />
+      <workItem from="1674992000892" duration="1403000" />
+      <workItem from="1676189947100" duration="684000" />
+      <workItem from="1676258336895" duration="2189000" />
+      <workItem from="1677485846719" duration="199000" />
+      <workItem from="1677486253077" duration="1994000" />
+      <workItem from="1679967968802" duration="809000" />
+      <workItem from="1680249615640" duration="2122000" />
+      <workItem from="1681373004412" duration="1578000" />
+      <workItem from="1682515371964" duration="804000" />
+      <workItem from="1683169362042" duration="643000" />
+      <workItem from="1683257304410" duration="3646000" />
+      <workItem from="1683354358959" duration="4000" />
+      <workItem from="1683365077485" duration="2887000" />
+      <workItem from="1683629542455" duration="603000" />
+      <workItem from="1684117349926" duration="1924000" />
+      <workItem from="1685426966468" duration="2712000" />
+      <workItem from="1685443126291" duration="605000" />
+      <workItem from="1685598454714" duration="1960000" />
+      <workItem from="1685675255436" duration="1307000" />
+      <workItem from="1685931659422" duration="3474000" />
+      <workItem from="1687779750908" duration="61000" />
+      <workItem from="1687834410734" duration="5000" />
+      <workItem from="1687848029166" duration="2583000" />
+      <workItem from="1687922774630" duration="9375000" />
+      <workItem from="1688094549336" duration="1855000" />
+      <workItem from="1688199261393" duration="7000" />
+      <workItem from="1688458651094" duration="793000" />
+      <workItem from="1688647648750" duration="1186000" />
+      <workItem from="1688809619200" duration="666000" />
+      <workItem from="1689160507648" duration="10000" />
+      <workItem from="1689406580977" duration="10000" />
+      <workItem from="1690165811125" duration="2588000" />
+      <workItem from="1691998146313" duration="756000" />
+      <workItem from="1692759646517" duration="2649000" />
+      <workItem from="1693460343747" duration="4000" />
+      <workItem from="1694401238607" duration="3855000" />
+      <workItem from="1694413541886" duration="1497000" />
+      <workItem from="1694419289862" duration="3292000" />
+      <workItem from="1694570211957" duration="5927000" />
+      <workItem from="1694656697210" duration="1396000" />
+      <workItem from="1701447336248" duration="716000" />
+      <workItem from="1705484679780" duration="519000" />
+      <workItem from="1710756868608" duration="899000" />
+      <workItem from="1710943385528" duration="1735000" />
+      <workItem from="1711026563970" duration="1018000" />
+      <workItem from="1711808332394" duration="348000" />
+      <workItem from="1713249424606" duration="598000" />
+      <workItem from="1713278094857" duration="3000" />
+      <workItem from="1713324689164" duration="6652000" />
+      <workItem from="1713344048701" duration="603000" />
+      <workItem from="1713365718965" duration="1313000" />
+      <workItem from="1713408564591" duration="599000" />
+      <workItem from="1713534773480" duration="9000" />
+      <workItem from="1713671072844" duration="146000" />
+      <workItem from="1713671239077" duration="3374000" />
     </task>
+    <task id="LOCAL-00001" summary="nn">
+      <created>1666764424296</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1666764424296</updated>
+    </task>
+    <task id="LOCAL-00002" summary="fix">
+      <created>1694659697353</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1694659697353</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -758,6 +930,15 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="nn" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

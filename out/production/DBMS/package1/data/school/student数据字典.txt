@@ -1,6 +1,0 @@
-4
-studentindex1,age,cluster;studentindex2,grade;
-name string not null
-grade int not null
-age int not null
-id long not null
