@@ -1,7 +1,8 @@
-package designpattern.singleInstance;
+package designpattern.singleInstance;//单例模式!!!
 
-/**单例写法2 饿汉式 类加载就给准备好实例 启动加载
- * 线程安全？？
+/**
+ * 单例写法2:饿汉式 类加载就给准备好实例
+ * 线程安全
  */
 public class Cat {
 

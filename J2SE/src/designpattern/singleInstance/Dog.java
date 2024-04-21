@@ -4,13 +4,15 @@ package designpattern.singleInstance;
  * 单例写法1
  */
 public class Dog {
-
     String name;
-    //阻止让别人用new来对此创建对象（保证对象唯一）
+
     //private私有方法只能在本类使用，如果使用public的话，外面的类就可以通过点语法拿到然后创建多个，就不唯一了。这样就相当于是成员变量了
     private static Dog dog = new Dog();
 
-    //私有化构造方法，防止通过new来创建对象
+    /**
+     * 私有化构造方法
+     * 阻止让别人用new来对此创建对象(保证对象唯一)
+     */
     private Dog() {
 
     }
