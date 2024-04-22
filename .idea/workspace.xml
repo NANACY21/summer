@@ -11,92 +11,19 @@
   <component name="ChangeListManager">
     <list default="true" id="6b35f66e-4e88-4cab-9344-32febfff8c02" name="Default Changelist" comment="整合目录">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2SE/src/designpattern/singleInstance/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/designpattern/singleInstance/Cat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2SE/src/designpattern/singleInstance/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/designpattern/singleInstance/Dog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2SE/src/objclone/Demo1.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/objclone/Demo1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2SE/src/objclone/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/objclone/Dog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/array/MatchException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/array/Matrix.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/array/Num2Exception.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/array/NumException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/array/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/array/TestArray.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/inherit/ExeOrder/Animal.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/inherit/ExeOrder/Bike.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/inherit/ExeOrder/Dog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/inherit/demo0/Circle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/inherit/demo0/Color.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/inherit/demo0/ColoredCircle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/inherit/demo0/Point.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/inherit/demo0/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/inherit/demo1/BoyFriend.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/inherit/demo1/Consumer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/inherit/demo1/GirlFriend.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/inherit/demo1/Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/inherit/demo1/Student.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/inherit/demo1/Teacher.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/inherit/demo2/BaseKnight.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/inherit/demo2/Dragon.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/inherit/demo2/King.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/inherit/demo2/Knight.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/inherit/demo2/Spider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/inherit/demo2/Superman.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/inherit/demo3/Bus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/inherit/demo3/Car.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/inherit/demo3/Truck.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/inherit/demo3/Vehicle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/inherit/demo4/Cat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/inherit/demo4/Dog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/inherit/demo4/Pet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/inherit/demo4/PetStore.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/inherit/demo4/penguin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/io/Demo1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/io/Demo2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/io/Demo3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/io/Demo4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/io/NIO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/io/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/io/a.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/io/b.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/io/imgDownload.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/net/Demo1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/net/chatroom/Client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/net/chatroom/CloseUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/net/chatroom/Receive.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/net/chatroom/Send.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/net/chatroom/Server$MyChannel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/net/chatroom/Server.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/net/game/Client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/net/game/Client2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/net/game/ConstPool.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/net/game/Node.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/net/game/RoutingTableTuple.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/net/game/Server.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/net/game/ServerThread.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/net/game/UndirectedGraph.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/net/game/server/shuxue.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/net/game/server/yuwen.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/net/game2/Client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/net/game2/Server.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/net/game2/ServerThread.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/thread/demo/DeadLock$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/thread/demo/DeadLock$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/thread/demo/DeadLock.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/thread/demo/TestLock.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/thread/demo/ThreadPoolTarget.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/thread/pc/Consumer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/thread/pc/Producer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/thread/pc/Stack.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/base/thread/pc/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/dataStructure/Search.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/dataStructure/Sort.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/dataStructure/Traversal.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/dataStructure/data/BinaryTree.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/dataStructure/data/Node.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/dataStructure/data/SqList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/pit/Demo1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/pit/Demo2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J2SE/pit/Dog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2SE/src/collection/Demo1.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/collection/Demo1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2SE/src/collection/Demo2.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/collection/Demo2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2SE/src/collection/Demo3.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/collection/Demo3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2SE/src/collection/note.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2SE/src/designpattern/singleInstance/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/designpattern/singleton/Cat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2SE/src/designpattern/singleInstance/Dog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2SE/src/designpattern/singleInstance/Fish.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/designpattern/singleton/Fish.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2SE/src/designpattern/singleInstance/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/designpattern/singleton/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2SE/src/designpattern/singleInstance/Panda.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/designpattern/singleton/Panda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2SE/src/designpattern/singleInstance/Pig.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/designpattern/singleton/Pig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2SE/src/designpattern/singleInstance/Tiger.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/designpattern/singleton/Tiger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2SE/src/str/Demo1.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/str/Demo1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2SE/src/str/Demo2.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -277,20 +204,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/lichi/projectList/self/projects",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.3505747",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Language Defaults",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/lichi/projectList/self/projects&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.3505747&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Java&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="IntroduceConstantDialog.RECENTS_KEY">
       <recent name="schoolcardms.dao.Database" />
@@ -372,7 +299,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.objclone.Demo1" />
-        <item itemvalue="Application.pit.Demo2" />
         <item itemvalue="Application.Demo1" />
         <item itemvalue="Application.Test1" />
         <item itemvalue="Application.com.matchacloud.Test" />
@@ -799,7 +725,9 @@
       <workItem from="1713408564591" duration="599000" />
       <workItem from="1713534773480" duration="9000" />
       <workItem from="1713671072844" duration="146000" />
-      <workItem from="1713671239077" duration="14928000" />
+      <workItem from="1713671239077" duration="15589000" />
+      <workItem from="1713699462500" duration="8071000" />
+      <workItem from="1713765694695" duration="9352000" />
     </task>
     <task id="LOCAL-00001" summary="nn">
       <created>1666764424296</created>
@@ -829,7 +757,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713688255485</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="整合目录">
+      <created>1713699066478</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1713699066478</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">

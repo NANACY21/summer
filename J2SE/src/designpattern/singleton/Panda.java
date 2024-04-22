@@ -1,19 +1,19 @@
-package designpattern.singleInstance;
+package designpattern.singleton;
 
-/**单例写法5 使用静态内部类
- * 饿汉式 线程安全 启动加载
+/**
+ * 单例写法3 使用静态内部类 饱汉式 线程安全 启动加载
  */
 public class Panda {
-    private Panda(){
+    private Panda() {
 
     }
 
-    public static Panda getPanda(){
+    public static Panda getPanda() {
         return InnerPanda.panda;
     }
 
-    private static class InnerPanda{
-        public static final Panda panda=new Panda();
+    private static class InnerPanda {
+        public static final Panda panda = new Panda();
     }
 
 

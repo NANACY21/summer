@@ -3,18 +3,35 @@ import java.util.*;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 
+/**
+ * HashMap
+ * ConcurrentHashMap
+ * Hashtable
+ * TreeMap
+ */
 public class Demo3 {
     public static void main(String[] args) {
+    }
 
+    /**
+     * ConcurrentHashMap
+     */
+    public void test1() {
+        ConcurrentHashMap chm = new ConcurrentHashMap();//最优解
+    }
+
+    /**
+     * HashMap
+     */
+    public void test2() {
         /**适用于增删、定位元素
          * 默认初始长度16（这个调用size是测不出的，size是元素个数，不是容量）
          * 加载因子0.75，元素个数超过容量长度的0.75倍时扩容 扩容成原来容量的一倍
          * 非线程安全 效率优于HashTable
          */
         HashMap<String, Object> hm = new HashMap();
-        ConcurrentHashMap chm = new ConcurrentHashMap();//最优解
-//        System.out.println("HashMap初始长度：" + hm.size());
         String message = "message";
+//        System.out.println("HashMap初始长度：" + hm.size());
         /**
          * put()怎么实现的
          */
@@ -76,8 +93,12 @@ public class Demo3 {
         hm.put(null, "lixiaolong");
         System.out.println(hm.get(null));
         System.out.println("HashMap实现了Map接口，HashMap示例至此ok");
+    }
 
-
+    /**
+     * Hashtable
+     */
+    public void test3() {
         /**
          * 线程安全
          * 遍历无序
@@ -114,7 +135,12 @@ public class Demo3 {
             Object o = es.nextElement();
             System.out.print(ht.get(o));
         }
+    }
 
+    /**
+     * TreeMap
+     */
+    public void test4() {
         /**非线程安全
          * 按key排序
          * 没有调优选项，因为该树总处于平衡状态
@@ -125,7 +151,7 @@ public class Demo3 {
         tm.put("ccc", 222);
         tm.put("eee", 3);
         tm.put("bbb", "resg");
-        htAllEntry = tm.keySet();
+        Set htAllEntry = tm.keySet();
         for (Object key : htAllEntry) {
             System.out.print(tm.get(key) + "\t");
         }

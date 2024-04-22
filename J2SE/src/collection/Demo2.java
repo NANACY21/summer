@@ -9,7 +9,12 @@ import java.util.Vector;
  */
 public class Demo2 {
     public static void main(String[] args) {
+    }
 
+    /**
+     * Vector
+     */
+    public void test1() {
         /**默认初始化长度10 扩容增量原来的一倍
          * 线程安全，这也导致了效率不如ArrayList
          * 底层数据结构是数组
@@ -26,7 +31,12 @@ public class Demo2 {
         v2.addElement("c");
         v1 = v2;
         System.out.print(v1);
+    }
 
+    /**
+     * HashSet
+     */
+    public void test2() {
         /**
          * 非线程安全 默认初始长度16
          * 加载因子是0.75，即元素个数超过原来的0.75倍时扩容 扩容为原来一倍
