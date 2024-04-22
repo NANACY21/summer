@@ -21,13 +21,22 @@ public class Demo3 {
     }
 
     /**
-     * HashMap
+     * HashMap:
+     * Java8底层:数组+单向链表+红黑树结构
+     * 非线程安全 效率优于Hashtable
+     * hashMap key不重复且无序!!!
+     * HashMap中的所有的key彼此之间是不可重复的、无序的。所有的key就构成一个Set集合。--->key所在的类要重写hashCode（）和equals（）
+     * HashMap中的所有的valve彼此之间是可重复的、无序的。所有的value就构成一个Collection集合。--->valve所在的类要重写equals（〕
+     * HashMap中的一个key-valve，就构成了一个Entry。
+     * HashMap中的所有的entry彼此之间是不可重复的、无序的。所有的entry就构成了一个Set集合。
+     * 思考:什么情况下重写equals、hashcode!!!
+     * 什么时候必须重写hashcode?hash结构且不可重复!!!
      */
     public void test2() {
         /**适用于增删、定位元素
          * 默认初始长度16（这个调用size是测不出的，size是元素个数，不是容量）
          * 加载因子0.75，元素个数超过容量长度的0.75倍时扩容 扩容成原来容量的一倍
-         * 非线程安全 效率优于HashTable
+         *
          */
         HashMap<String, Object> hm = new HashMap();
         String message = "message";
@@ -96,11 +105,13 @@ public class Demo3 {
     }
 
     /**
-     * Hashtable
+     * Hashtable:
+     * 线程安全
+     * Java8底层:数组+单向链表
      */
     public void test3() {
         /**
-         * 线程安全
+         *
          * 遍历无序
          * 默认初始容量11
          * 加载因子0.75 元素个数超过容量的0.75倍时容量扩容为原来一倍+1
@@ -138,7 +149,9 @@ public class Demo3 {
     }
 
     /**
-     * TreeMap
+     * TreeMap:
+     * 底层使用红黑树存储
+     * 可以按照添加的key-value中的key元素的指定的属性的大小顺序进行遍历
      */
     public void test4() {
         /**非线程安全

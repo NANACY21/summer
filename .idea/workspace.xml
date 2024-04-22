@@ -9,21 +9,11 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b35f66e-4e88-4cab-9344-32febfff8c02" name="Default Changelist" comment="整合目录">
+    <list default="true" id="6b35f66e-4e88-4cab-9344-32febfff8c02" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/J2SE/src/collection/Demo1.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/collection/Demo1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/J2SE/src/collection/Demo2.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/collection/Demo2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/J2SE/src/collection/Demo3.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/collection/Demo3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2SE/src/collection/note.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2SE/src/designpattern/singleInstance/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/designpattern/singleton/Cat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2SE/src/designpattern/singleInstance/Dog.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2SE/src/designpattern/singleInstance/Fish.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/designpattern/singleton/Fish.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2SE/src/designpattern/singleInstance/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/designpattern/singleton/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2SE/src/designpattern/singleInstance/Panda.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/designpattern/singleton/Panda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2SE/src/designpattern/singleInstance/Pig.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/designpattern/singleton/Pig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2SE/src/designpattern/singleInstance/Tiger.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/designpattern/singleton/Tiger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2SE/src/str/Demo1.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/str/Demo1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2SE/src/str/Demo2.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -727,7 +717,8 @@
       <workItem from="1713671072844" duration="146000" />
       <workItem from="1713671239077" duration="15589000" />
       <workItem from="1713699462500" duration="8071000" />
-      <workItem from="1713765694695" duration="9352000" />
+      <workItem from="1713765694695" duration="9711000" />
+      <workItem from="1713790643669" duration="8804000" />
     </task>
     <task id="LOCAL-00001" summary="nn">
       <created>1666764424296</created>
@@ -764,7 +755,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713699066478</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="集合类 单例模式 字符串">
+      <created>1713775492472</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1713775492472</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -934,7 +932,8 @@
     <MESSAGE value="fix" />
     <MESSAGE value="2024年4月21号" />
     <MESSAGE value="整合目录" />
-    <option name="LAST_COMMIT_MESSAGE" value="整合目录" />
+    <MESSAGE value="集合类 单例模式 字符串" />
+    <option name="LAST_COMMIT_MESSAGE" value="集合类 单例模式 字符串" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

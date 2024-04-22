@@ -7,10 +7,13 @@ import java.util.*;
  *         ArrayList 适用查
  *         LinkedList 适用增删改
  *         Vector
- *     Set接口:适用增删 增删不引起元素位置改变 无放入顺序 不可重复 set中元素须定义equals()
- *         HashSet 适用快速查找 HashSet中元素须定义hashCode() 只能放一个null
+ *     Set接口:适用增删 增删不引起元素位置改变 无放入顺序 不可重复
+ *         什么是无序性？与添加的元素的位置有关，不像ArrayList一样是依次紧密排列的，
+ *         元素hashcode决定了在set中存放的位置!!!
+ *         不可重复性:hashcode不同则放入，hashcode相同则再判断是否逻辑相同!!!
+ *         HashSet 适用快速查找 HashSet中元素须定义hashCode()!!! 只能放一个null
  *         TreeSet 可排序 基于红黑树 不允许null值
- *         LinkedHashSet 查找也很快 迭代器遍历时以插入顺序显示
+ *         LinkedHashSet 查找也很快 迭代器遍历时以插入顺序显示 HashSet的子类
  *
  * java.util.Map接口(存键值对 映射)
  *     HashMap 利用hashCode()进行快速查询 输入/输出顺序不一致
@@ -33,7 +36,7 @@ public class Demo1 {
     /**
      * ArrayList:
      * 1 非线程安全
-     * 2 数组 默认初始化长度10 查找效率高 模拟栈 扩容原来1.5倍
+     * 2 底层是Object数组!!! 默认初始化长度10 添加、查找效率高!!! 模拟栈 扩容原来1.5倍
      */
     public void test1() {
 
@@ -46,7 +49,7 @@ public class Demo1 {
     /**
      * LinkedList:
      * 1 非线程安全
-     * 2 双向链表 第一次 add初始化 插入删除效率高 模拟队列
+     * 2 底层是双向链表 第一次 add初始化 插入、删除效率高，添加、查找效率低!!! 模拟队列
      */
     public void test2() {
 
@@ -73,7 +76,8 @@ public class Demo1 {
 
 
     /**
-     * TreeSet
+     * TreeSet:可以按照添加的元素的指定的属性的大小顺序进行遍历。
+     * 不需要重写equals和hashcode，因为底层不是哈希了!!!
      */
     public void test3() {
         TreeSet ts = new TreeSet();
@@ -102,5 +106,25 @@ public class Demo1 {
 
             System.out.println(entry.getKey() + entry.getValue());
         }
+    }
+
+    /**
+     * LinkedHashSet:
+     * 是HashSet的子类；在现有的数组+单向链表+红黑树结构的基础上，又添加了
+     * 一组双向链表，用于记录添加元素的先后顺序。即：我们可以按照添好元素的顺序实现遍历。
+     */
+    public void test5() {
+
+
+    }
+
+    /**
+     * LinkedHashMap:
+     * HashMap的子类，在hashmap底层数据结构基础上增加了双向链表!!!
+     * 用于记录添加元素的先后顺序。即：我们可以按照添好元素的顺序实现遍历。
+     * 对于频繁的遍历操作，建议使用此类。
+     */
+    public void test6() {
+
     }
 }
