@@ -9,11 +9,14 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b35f66e-4e88-4cab-9344-32febfff8c02" name="Default Changelist" comment="">
+    <list default="true" id="6b35f66e-4e88-4cab-9344-32febfff8c02" name="Default Changelist" comment="集合类更新">
+      <change afterPath="$PROJECT_DIR$/J2SE/src/datastructure/data/DuLinkNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/J2SE/src/collection/Demo1.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/collection/Demo1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/J2SE/src/collection/Demo2.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/collection/Demo2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/J2SE/src/collection/Demo3.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/collection/Demo3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2SE/src/datastructure/Traversal.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/datastructure/Traversal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2SE/src/datastructure/data/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/datastructure/data/Node.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -718,7 +721,9 @@
       <workItem from="1713671239077" duration="15589000" />
       <workItem from="1713699462500" duration="8071000" />
       <workItem from="1713765694695" duration="9711000" />
-      <workItem from="1713790643669" duration="8804000" />
+      <workItem from="1713790643669" duration="8864000" />
+      <workItem from="1713838910737" duration="8789000" />
+      <workItem from="1713876617510" duration="7593000" />
     </task>
     <task id="LOCAL-00001" summary="nn">
       <created>1666764424296</created>
@@ -762,7 +767,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713775492472</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="集合类更新">
+      <created>1713799496019</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1713799496019</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -933,7 +945,8 @@
     <MESSAGE value="2024年4月21号" />
     <MESSAGE value="整合目录" />
     <MESSAGE value="集合类 单例模式 字符串" />
-    <option name="LAST_COMMIT_MESSAGE" value="集合类 单例模式 字符串" />
+    <MESSAGE value="集合类更新" />
+    <option name="LAST_COMMIT_MESSAGE" value="集合类更新" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -14,6 +14,7 @@ public class Demo2 {
     /**
      * Vector:List的古老实现类 底层数据结构是数组!!!
      * 线程安全，这也导致了效率不如ArrayList
+     * 底层数组扩容为原来2倍!!!
      */
     public void test1() {
         /**默认初始化长度10 扩容增量原来的一倍

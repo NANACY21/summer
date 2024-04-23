@@ -1,11 +1,11 @@
 package datastructure.data;
 
 /**
- * 树节点
+ * 二叉树节点
  */
 public class Node {
 
-    private String data;
+    private Object data;
     private Node leftChild;
     private Node rightChild;
 
@@ -15,6 +15,10 @@ public class Node {
         this.rightChild = rightChild;
     }
 
+    public Node(String data) {
+        this.data = data;
+    }
+
     /**
      * 无参构造 成员变量为null
      */
@@ -22,7 +26,7 @@ public class Node {
 
     }
 
-    public String getData() {
+    public Object getData() {
         return data;
     }
 

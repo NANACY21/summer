@@ -42,7 +42,7 @@ public class Traversal {
             Stack<Node> stack = new Stack<Node>();
             while (node != null || stack.size() > 0) {//将所有左孩子入栈
                 if (node != null) {//压栈之前先访问
-                    v.addElement(node.getData());
+                    v.addElement(node.getData().toString());
                     stack.push(node);
                     node = node.getLeftChild();
                 } else {
@@ -82,7 +82,7 @@ public class Traversal {
                 node = node.getLeftChild();
             } else {
                 node = stack.pop();//出栈并访问
-                v.addElement(node.getData());
+                v.addElement(node.getData().toString());
                 node = node.getRightChild();
             }
         }
@@ -126,7 +126,7 @@ public class Traversal {
                 }
             }
             while (output.size() > 0) {
-                String a = output.pop().getData();
+                String a = output.pop().getData().toString();
                 v.addElement(a);
             }
             return v;
@@ -147,7 +147,7 @@ public class Traversal {
         Node tempNode;
         while (!list.isEmpty()) {
             tempNode = list.poll();
-            v.addElement(tempNode.getData());
+            v.addElement(tempNode.getData().toString());
             if (tempNode.getLeftChild() != null) {
                 list.add(tempNode.getLeftChild());
             }

@@ -4,8 +4,8 @@ import java.util.*;
 
 /**java.util.Collection接口(存一个一个的数据)
  *     List接口:适用查询 有放入顺序 可重复 动态数组
- *         ArrayList 适用查
- *         LinkedList 适用增删改
+ *         ArrayList
+ *         LinkedList
  *         Vector
  *     Set接口:适用增删 增删不引起元素位置改变 无放入顺序 不可重复
  *         什么是无序性？与添加的元素的位置有关，不像ArrayList一样是依次紧密排列的，
@@ -16,7 +16,7 @@ import java.util.*;
  *         LinkedHashSet 查找也很快 迭代器遍历时以插入顺序显示 HashSet的子类
  *
  * java.util.Map接口(存键值对 映射)
- *     HashMap 利用hashCode()进行快速查询 输入/输出顺序不一致
+ *     HashMap
  *     TreeMap 基于红黑树 得到的结果被排序
  *     LinkedHashMap 输入/输出顺序一致
  *     Hashtable
@@ -35,21 +35,33 @@ public class Demo1 {
 
     /**
      * ArrayList:
-     * 1 非线程安全
-     * 2 底层是Object数组!!! 默认初始化长度10 添加、查找效率高!!! 模拟栈 扩容原来1.5倍
+     * 1 非线程安全 适用查 添加、查找效率高!!!时间复杂度为O(1)
+     * 删除和插入操作效率低，时间复杂度为O(n)
+     * 2 底层是Object数组!!!
+     * new list对象时数组默认初始化长度10(java7)
+     * new list对象时数组默认初始化长度0 首次添加元素时指向新数组长度10(java8)
+     * 数组扩容原来1.5倍 指向新数组地址
+     * 模拟栈
      */
     public void test1() {
-
+        //底层创建长度为10的数组。
         ArrayList<String> aL = new ArrayList<>();
-        //这样指定长度，不扩容
+        aL.add("aaa");//数组索引0位置放"aaa"
+        //底层创建指定capacity长度的数组。大体确认集合长度时使用此参数 避免扩容和复制数组
+        //但是如果一直添加还是会扩容!!!
         aL = new ArrayList<>(20);
     }
 
 
     /**
      * LinkedList:
-     * 1 非线程安全
-     * 2 底层是双向链表 第一次 add初始化 插入、删除效率高，添加、查找效率低!!! 模拟队列
+     * 1 非线程安全 适用增删改
+     * 2 底层是双向链表
+     * 第一次add 将数据封装到Node对象 没有扩容问题
+     * 插入、删除效率高，时间复杂度为O(1)
+     * 添加、查找效率低!!!时间复杂度O(n)有可能添加操作是O(1)
+     * 模拟队列
+     * 看LinkedList类源码!!!
      */
     public void test2() {
 
