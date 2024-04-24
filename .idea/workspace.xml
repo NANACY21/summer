@@ -10,13 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b35f66e-4e88-4cab-9344-32febfff8c02" name="Default Changelist" comment="集合类更新">
-      <change afterPath="$PROJECT_DIR$/J2SE/src/datastructure/data/DuLinkNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2SE/src/collection/Demo1.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/collection/Demo1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2SE/src/collection/Demo2.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/collection/Demo2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/J2SE/src/collection/Demo3.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/collection/Demo3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2SE/src/datastructure/Traversal.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/datastructure/Traversal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2SE/src/datastructure/data/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/datastructure/data/Node.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -723,7 +718,8 @@
       <workItem from="1713765694695" duration="9711000" />
       <workItem from="1713790643669" duration="8864000" />
       <workItem from="1713838910737" duration="8789000" />
-      <workItem from="1713876617510" duration="7593000" />
+      <workItem from="1713876617510" duration="7695000" />
+      <workItem from="1713927829026" duration="785000" />
     </task>
     <task id="LOCAL-00001" summary="nn">
       <created>1666764424296</created>
@@ -774,7 +770,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713799496019</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="集合类更新">
+      <created>1713884299000</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1713884299000</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
