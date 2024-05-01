@@ -1,6 +1,0 @@
-4
-
-name string not null
-id long not null primary key
-grade int not null
-age int not null

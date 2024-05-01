@@ -9,9 +9,12 @@ import java.util.concurrent.ConcurrentHashMap;
  * Hashtable
  * TreeMap
  */
-public class Demo3 {
-    public static void main(String[] args) {
+public class Demo3 implements Cloneable {
+    public static void main(String[] args) throws CloneNotSupportedException {
+
     }
+
+
 
     /**
      * ConcurrentHashMap
@@ -22,6 +25,7 @@ public class Demo3 {
 
     /**
      * HashMap:
+     * 键、值都可以为null!!!
      * Java7底层:数组+单向链表
      * Java8底层:数组+单向链表+红黑树
      * 方便查询/修改，继承了数组的线性查找和链表的寻址修改!!!
@@ -175,6 +179,8 @@ public class Demo3 {
      * Hashtable:
      * 线程安全
      * Java8底层:数组+单向链表
+     * 键、值都不能为null!!!
+     * 和hashmap区别：底层数据结构 线程安全 允许null值!!!
      */
     public void test3() {
         /**
@@ -219,6 +225,7 @@ public class Demo3 {
      * TreeMap:
      * 底层使用红黑树存储
      * 可以按照添加的key-value中的key元素的指定的属性的大小顺序进行遍历
+     * 基于红黑树 得到的结果被排序
      */
     public void test4() {
         /**非线程安全

@@ -1,4 +1,4 @@
-package com.matchacloud;
+package str;
 
 import java.io.*;
 import java.text.DecimalFormat;

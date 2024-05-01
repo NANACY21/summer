@@ -1,4 +1,4 @@
-package partition2;
+package acm.acm20240501;
 
 /**
  * 1-1000的素数

@@ -1,6 +1,8 @@
-package partition2;
+package acm.acm20240501;
 import java.util.Scanner;
+
 public class Caiquan {
+
     int me;
     int computer;
     private static final Object lock = new Object();
@@ -18,8 +20,8 @@ public class Caiquan {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        Caiquan c=new Caiquan();
-        Thread me=new Thread(new Runnable() {
+        Caiquan c = new Caiquan();
+        Thread me = new Thread(new Runnable() {
             @Override
             public void run() {
                 synchronized (c.getLock())//不可以锁一个null对象
@@ -27,55 +29,44 @@ public class Caiquan {
                     Scanner scan = new Scanner(System.in);
                     System.out.println("你出啥？[1 - 石头 2 - 剪刀 3 - 布]");
                     int a = scan.nextInt();
-                    if (a == 1)
-                    {
+                    if (a == 1) {
                         System.out.println("您出石头");
                         c.setMe(a);
-                    }
-                    else if (a == 2)
-                    {
+                    } else if (a == 2) {
                         System.out.println("您出剪刀");
                         c.setMe(a);
-                    }
-                    else if (a == 3)
-                    {
+                    } else if (a == 3) {
                         System.out.println("您出布");
                         c.setMe(a);
-                    }
-                    else
-                    {
+                    } else {
                         System.out.println("输入错误，请重新输入");
                     }
                 }
             }
-        },"me");
-        Thread computer=new Thread(new Runnable() {
+        }, "me");
+        Thread computer = new Thread(new Runnable() {
             @Override
             public void run() {
-                synchronized (c.getLock())
-                {
+                synchronized (c.getLock()) {
                     double shu = Math.random();
                     int i = (int) Math.floor(Math.random() * 3);
-                    if (i == 1)
-                    {
+                    if (i == 1) {
                         System.out.println("电脑出石头");
                         c.setComputer(i);
                     }
-                    if (i == 2)
-                    {
+                    if (i == 2) {
                         System.out.println("电脑出剪刀");
 
                         c.setComputer(i);
                     }
-                    if (i == 3)
-                    {
+                    if (i == 3) {
                         System.out.println("电脑出布");
 
                         c.setComputer(i);
                     }
                 }
             }
-        },"computer");
+        }, "computer");
 //        me.setPriority(Thread.MAX_PRIORITY);//最高优先级
         me.start();
         me.join();

@@ -11,14 +11,14 @@ import java.util.*;
  *         什么是无序性？与添加的元素的位置有关，不像ArrayList一样是依次紧密排列的，
  *         元素hashcode决定了在set中存放的位置!!!
  *         不可重复性:hashcode不同则放入，hashcode相同则再判断是否逻辑相同!!!
- *         HashSet 适用快速查找 HashSet中元素须定义hashCode()!!! 只能放一个null
- *         TreeSet 可排序 基于红黑树 不允许null值
- *         LinkedHashSet 查找也很快 迭代器遍历时以插入顺序显示 HashSet的子类
+ *         HashSet
+ *         TreeSet
+ *         LinkedHashSet
  *
  * java.util.Map接口(存键值对 映射)
  *     HashMap
- *     TreeMap 基于红黑树 得到的结果被排序
- *     LinkedHashMap 输入/输出顺序一致
+ *     TreeMap
+ *     LinkedHashMap
  *     Hashtable
  *     Properties
  *     WeakHashMap
@@ -30,6 +30,10 @@ public class Demo1 {
         // 针对于具体特点的多个数据，知道选择相应的适合的接口的主要实现类
         // 接口不同实现类区别
         // 实现类底层数据结构
+        ArrayList<String> list = new ArrayList<>();
+        list.add("1");
+        System.out.println(list);
+
     }
 
 
@@ -90,6 +94,7 @@ public class Demo1 {
     /**
      * TreeSet:可以按照添加的元素的指定的属性的大小顺序进行遍历。
      * 不需要重写equals和hashcode，因为底层不是哈希了!!!
+     * 可排序 基于红黑树 不允许null值
      */
     public void test3() {
         TreeSet ts = new TreeSet();
@@ -124,6 +129,7 @@ public class Demo1 {
      * LinkedHashSet:
      * 是HashSet的子类；在现有的数组+单向链表+红黑树结构的基础上，又添加了
      * 一组双向链表，用于记录添加元素的先后顺序。即：我们可以按照添好元素的顺序实现遍历。
+     * 查找也很快 迭代器遍历时以插入顺序显示 HashSet的子类
      */
     public void test5() {
 
@@ -135,6 +141,7 @@ public class Demo1 {
      * HashMap的子类，在hashmap底层数据结构基础上增加了双向链表!!!
      * 用于记录添加元素的先后顺序。即：我们可以按照添好元素的顺序实现遍历。
      * 对于频繁的遍历操作，建议使用此类。
+     * 输入/输出顺序一致
      */
     public void test6() {
 

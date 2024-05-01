@@ -1,4 +1,0 @@
-2
-
-kehao int not null primary key
-kechengming string not null

@@ -1,4 +1,5 @@
 package collection;
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Vector;
@@ -7,7 +8,7 @@ import java.util.Vector;
  * 泛型，通配符
  * E -- 变量类型
  */
-public class Demo2 {
+public class Demo2  implements Serializable {
     public static void main(String[] args) {
     }
 
@@ -41,6 +42,7 @@ public class Demo2 {
      * 底层保存数据的是HashMap!!!
      * 自动排序 性能优于TreeSet
      * 加载因子是0.75，即元素个数超过原来的0.75倍时扩容 扩容为原来一倍
+     * 适用快速查找 HashSet中元素须定义hashCode()!!! 只能放一个null
      */
     public void test2() {
         HashSet hs = new HashSet();

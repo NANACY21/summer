@@ -1,4 +1,4 @@
-package partition2;
+package acm.acm20240501;
 
 public class Shuixianhua {
     public static void main(String[] args) {
