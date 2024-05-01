@@ -12,70 +12,51 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b35f66e-4e88-4cab-9344-32febfff8c02" name="Default Changelist" comment="集合类更新">
-      <change afterPath="$PROJECT_DIR$/J2SE/src/thread/demo2/UtilClass.java" afterDir="false" />
+    <list default="true" id="6b35f66e-4e88-4cab-9344-32febfff8c02" name="Default Changelist" comment="整合代码">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ACM/ACM.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ACM/src/partition1/ByteDance.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ACM/src/partition1/Guazi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ACM/src/partition1/LargeNum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ACM/src/partition1/Tencent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ACM/src/partition2/Caiquan.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/acm/acm20240501/Caiquan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ACM/src/partition2/Chashu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ACM/src/partition2/Daoshu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ACM/src/partition2/Lingxing.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ACM/src/partition2/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ACM/src/partition2/Neusoft1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ACM/src/partition2/Shuixianhua.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/acm/acm20240501/Shuixianhua.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ACM/src/partition2/SuShu.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/acm/acm20240501/SuShu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ACM/src/partition2/Toupiao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ACM/src/partition2/chepaihao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ACM/src/partition2/chitao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ACM/src/partition2/yanghuisanjiao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBMS/DBMS.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBMS/src/com/matchacloud/ConstPool.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBMS/src/com/matchacloud/DataProcess.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBMS/src/com/matchacloud/Display.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBMS/src/com/matchacloud/Ll.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBMS/src/com/matchacloud/SqlParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBMS/src/com/matchacloud/Test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBMS/src/com/matchacloud/Tool.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/str/Tool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBMS/src/com/matchacloud/data/company/student.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBMS/src/com/matchacloud/data/company/student数据字典.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBMS/src/com/matchacloud/data/powerTable.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBMS/src/com/matchacloud/data/school/kecheng.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBMS/src/com/matchacloud/data/school/kecheng数据字典.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBMS/src/com/matchacloud/data/school/student.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBMS/src/com/matchacloud/data/school/studentindex1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBMS/src/com/matchacloud/data/school/studentindex2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBMS/src/com/matchacloud/data/school/student数据字典.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBMS/src/com/matchacloud/data/school/teacher.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBMS/src/com/matchacloud/data/school/teacher数据字典.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBMS/src/com/matchacloud/data/users.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2SE/src/collection/Demo1.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/collection/Demo1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2SE/src/collection/Demo2.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/collection/Demo2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2SE/src/collection/Demo3.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/collection/Demo3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2SE/src/net/game/ServerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2SE/src/net/game/ServerThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cardms/cardms.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cardms/src/schoolcardms/Test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cardms/src/schoolcardms/dao/Database.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cardms/src/schoolcardms/dao/SCUserDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cardms/src/schoolcardms/dao/shiyan7.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cardms/src/schoolcardms/img/a.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cardms/src/schoolcardms/service/SCUserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cardms/src/schoolcardms/ui/AccountActivation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cardms/src/schoolcardms/ui/Calculator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cardms/src/schoolcardms/ui/MainUI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cardms/src/schoolcardms/ui/Register.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cardms/src/schoolcardms/ui/TR.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cardms/src/schoolcardms/ui/TextEditor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cardms/src/schoolcardms/util/ConstPool.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cardms/src/schoolcardms/util/SCUserList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cardms/src/schoolcardms/vo/CM.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cardms/src/schoolcardms/vo/SCUser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cardms/src/schoolcardms/vo/SequenceOfNumber.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cardms/src/schoolcardms/vo/TR.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysql-connector-java-8.0.11.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TEST/partition1/AA.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TEST/partition1/Gejia.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TEST/partition1/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TEST/partition1/Queue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TEST/partition1/SimpleQueue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TEST/partition2/Demo1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TEST/partition2/Demo2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TEST/partition2/Wangyi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TEST/partition2/jindie.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cardms/schoolcardms/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cardms/schoolcardms/dao/Database.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cardms/schoolcardms/dao/SCUserDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cardms/schoolcardms/dao/shiyan7.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cardms/schoolcardms/img/a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cardms/schoolcardms/service/SCUserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cardms/schoolcardms/ui/AccountActivation$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cardms/schoolcardms/ui/AccountActivation$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cardms/schoolcardms/ui/AccountActivation$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cardms/schoolcardms/ui/AccountActivation$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cardms/schoolcardms/ui/AccountActivation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cardms/schoolcardms/ui/Calculator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cardms/schoolcardms/ui/MainUI$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cardms/schoolcardms/ui/MainUI$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cardms/schoolcardms/ui/MainUI$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cardms/schoolcardms/ui/MainUI$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cardms/schoolcardms/ui/MainUI$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cardms/schoolcardms/ui/MainUI$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cardms/schoolcardms/ui/MainUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cardms/schoolcardms/ui/Register$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cardms/schoolcardms/ui/Register$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cardms/schoolcardms/ui/Register$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cardms/schoolcardms/ui/Register$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cardms/schoolcardms/ui/Register$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cardms/schoolcardms/ui/Register.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cardms/schoolcardms/ui/TR.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cardms/schoolcardms/ui/TextEditor$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cardms/schoolcardms/ui/TextEditor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cardms/schoolcardms/util/ConstPool.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cardms/schoolcardms/util/SCUserList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cardms/schoolcardms/vo/CM.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cardms/schoolcardms/vo/SCUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cardms/schoolcardms/vo/SequenceOfNumber.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cardms/schoolcardms/vo/TR.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -827,7 +808,7 @@
       <workItem from="1714400544067" duration="3128000" />
       <workItem from="1714444346807" duration="11481000" />
       <workItem from="1714535532109" duration="5012000" />
-      <workItem from="1714564742202" duration="5393000" />
+      <workItem from="1714564742202" duration="6120000" />
     </task>
     <task id="LOCAL-00001" summary="nn">
       <created>1666764424296</created>
@@ -892,7 +873,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713928776339</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="整合代码">
+      <option name="closed" value="true" />
+      <created>1714575073810</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1714575073810</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1064,7 +1053,8 @@
     <MESSAGE value="整合目录" />
     <MESSAGE value="集合类 单例模式 字符串" />
     <MESSAGE value="集合类更新" />
-    <option name="LAST_COMMIT_MESSAGE" value="集合类更新" />
+    <MESSAGE value="整合代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="整合代码" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
