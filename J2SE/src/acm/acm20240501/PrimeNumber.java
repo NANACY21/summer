@@ -1,9 +1,9 @@
 package acm.acm20240501;
 
 /**
- * 1-1000的素数
+ * 1-1000的素数(质数)
  */
-public class SuShu {
+public class PrimeNumber {
 
     public static void main(String[] args) {
         int j;

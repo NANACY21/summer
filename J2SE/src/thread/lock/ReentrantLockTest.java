@@ -1,13 +1,13 @@
 package thread.lock;
 
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.locks.ReentrantLock;
 
+/**
+ * ReentrantLock是可重入锁 公平锁/非公平锁 排他锁!!!
+ */
 public class ReentrantLockTest {
-    private ReentrantLock lock = new ReentrantLock();
-
     public static void main(String[] args) {
-//        ConcurrentHashMap
+        ReentrantLock lock = new ReentrantLock();
     }
 
 }

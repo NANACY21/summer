@@ -7,6 +7,7 @@ public class A extends Thread{
     A(){
         setDaemon(true);
     }
+
     public void run(){
         (new B()).start();
         try {

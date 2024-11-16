@@ -6,7 +6,7 @@ import java.io.UnsupportedEncodingException;
  *
  * String类:引用类型
  * 1 不能被继承
- * 2 不可变字符串是因为 其属性final修饰char数组!!!
+ * 2 不可变字符串是因为 其属性final修饰char数组!!!因此线程安全
  * 3 字符串常量池不允许存放相同字符串常量
  *
  * StringBuffer:
@@ -19,6 +19,8 @@ import java.io.UnsupportedEncodingException;
  * 如果字符串拼接对象还是当前地址，如果char数组需要扩容，对象的属性char数组地址也换一下!!!
  * StringBuffer比较相等先toString，再比
  * "li"+"chi" 在底层使用StringBuilder进行拼接
+ *
+ * 三者区别：可变性 线程安全性 性能方面 存储位置
  */
 public class Demo1 {
 

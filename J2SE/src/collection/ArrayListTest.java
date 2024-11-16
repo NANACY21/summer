@@ -24,7 +24,7 @@ import java.util.*;
  *     WeakHashMap
  *     IdentityHashMap
  */
-public class Demo1 {
+public class ArrayListTest {
 
     public static void main(String[] args) {
         // 针对于具体特点的多个数据，知道选择相应的适合的接口的主要实现类

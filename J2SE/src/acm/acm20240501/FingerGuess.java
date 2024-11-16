@@ -1,7 +1,10 @@
 package acm.acm20240501;
 import java.util.Scanner;
 
-public class Caiquan {
+/**
+ * 猜拳游戏
+ */
+public class FingerGuess {
 
     int me;
     int computer;
@@ -20,7 +23,7 @@ public class Caiquan {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        Caiquan c = new Caiquan();
+        FingerGuess c = new FingerGuess();
         Thread me = new Thread(new Runnable() {
             @Override
             public void run() {

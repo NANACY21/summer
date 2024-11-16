@@ -1,10 +1,9 @@
-package thread.demo;
+package thread.lock;
 
-/**ok
- * 同步锁示例
- * 锁同一个对象则不能同时执行
+/**
+ * 同步关键字:排他锁(锁同一个对象则不能同时执行) 可重入锁 非公平锁
  */
-public class TestSync {
+public class SyncTest {
 
     private static final Object lock = new Object();
     private int a;
@@ -67,20 +66,20 @@ public class TestSync {
 
     public static void main(String[] args) {
 
-        TestSync test = new TestSync();
+        SyncTest test = new SyncTest();
 
         //同步锁示例
         new Thread(new Runnable() {
             @Override
             public void run() {
-                TestSync.a();
+                SyncTest.a();
             }
         }, "T1").run();
 
         new Thread(new Runnable() {
             @Override
             public void run() {
-                TestSync.b();
+                SyncTest.b();
             }
         }, "T2").run();
 
@@ -94,7 +93,7 @@ public class TestSync {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                TestSync.d();
+                SyncTest.d();
             }
         }, "T4").start();
         new Thread(new Runnable() {

@@ -1,9 +1,15 @@
-package thread.demo;
+package thread.jmm;
 
 import java.text.SimpleDateFormat;
 import java.util.Random;
 
-public class ThreadLocalExample implements Runnable {
+/**
+ * ThreadLocal案例!!!
+ * 任何情况下线程都不能直接操作主存
+ *
+ *
+ */
+public class ThreadLocalTest implements Runnable {
 
 
 
@@ -12,7 +18,7 @@ public class ThreadLocalExample implements Runnable {
             ThreadLocal.withInitial(() -> new SimpleDateFormat("yyyyMMdd HHmm"));
 
     public static void main(String[] args) throws InterruptedException {
-        ThreadLocalExample obj = new ThreadLocalExample();
+        ThreadLocalTest obj = new ThreadLocalTest();
         for (int i = 0; i < 10; i++) {
             Thread t = new Thread(obj, "" + i);
             Thread.sleep(new Random().nextInt(1000));

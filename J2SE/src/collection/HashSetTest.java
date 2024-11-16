@@ -8,7 +8,7 @@ import java.util.Vector;
  * 泛型，通配符
  * E -- 变量类型
  */
-public class Demo2  implements Serializable {
+public class HashSetTest implements Serializable {
     public static void main(String[] args) {
     }
 

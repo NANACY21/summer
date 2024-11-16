@@ -9,7 +9,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * Hashtable
  * TreeMap
  */
-public class Demo3 implements Cloneable {
+public class HashMapTest implements Cloneable {
     public static void main(String[] args) throws CloneNotSupportedException {
 
     }
@@ -18,16 +18,24 @@ public class Demo3 implements Cloneable {
 
     /**
      * ConcurrentHashMap
+     * Java7:采用分段锁 每把锁只锁数组的一段数据 内部维护了一个Segment数组 Segment数组每个元素(都是一把锁):hashentry数组(concurrenthashmap的
+     * 切分) 获取不到锁的线程先创建好Node节点 构造node节点的时候先判断key是否存在(这也不影响线程安全问题 不put 但是先去判断key是否存在)
+     * Java8底层:数组+单向链表+红黑树
+     * 初始化时候 默认初始化大小为16 负载因子为0.75
+     * 数组长度大于64且链表长度大于等于8时，链表会转成红黑树
+     * =并发安全的hashmap
      */
     public void test1() {
-        ConcurrentHashMap chm = new ConcurrentHashMap();//最优解
+        ConcurrentHashMap<String, Object> conHashMap = new ConcurrentHashMap<>();
+
     }
 
     /**
      * HashMap:
      * 键、值都可以为null!!!
+     * HashMap的key最好使用不可变类型的对象!!!
      * Java7底层:数组+单向链表
-     * Java8底层:数组+单向链表+红黑树
+     * Java8底层:数组+单向链表+红黑树 数组长度始终为2的幂次方!!!
      * 方便查询/修改，继承了数组的线性查找和链表的寻址修改!!!
      * 非线程安全 效率优于Hashtable 所以HashMap很快
      * 适用于增删、定位元素
