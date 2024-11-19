@@ -7,7 +7,7 @@ import java.io.UnsupportedEncodingException;
  * String类:引用类型
  * 1 不能被继承
  * 2 不可变字符串是因为 其属性final修饰char数组!!!因此线程安全
- * 3 字符串常量池不允许存放相同字符串常量
+ * 3 字符串常量池不允许存放相同字符串常量,字符串常量池在jvm内存位置,字面量,String内存地址相关
  *
  * StringBuffer:
  * 1 可变字符串

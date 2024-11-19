@@ -1,20 +1,32 @@
 package reflex;
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-/**反射
+/**
+ * java源码编译后生成.class文件,当new该对象或new子类对象或执行main()或调用静态成员或反射时,该class文件将加载到内存中,
+ * jvm会在堆中将加载到内存的class文件创建出一个对应的对象,即class对象
+ *
+ * 反射:是解剖class对象的一个技术,获取class对象的成员变量、方法名等,能获取一个class对象的方法名列表
+ * 反射的好处是让代码更灵活通用,代码没写死
  *
  * 可以操作私有属性（但不这样做）
  * 运行期间，对象的动态改变，（框架的原理：反射、设计模式）
  * 利用反射获取：父类、接口、构造器
+ *
+ *
  */
 public class Test1 {
 
     public static void main(String[] args) throws IllegalAccessException, InstantiationException, InvocationTargetException {
         Dog dog = new Dog();
         dog.wangwang();
+
+
         /**
+         * 描述class对象的类叫Class类
+         * 首先,要获取class对象(3种方法),类加载一次,class对象内存中就一个,反射形式创建类对象、对象
          * 获取class对象的方法1：
          */
         Class<? extends Dog> dogClass1 = dog.getClass();
@@ -33,6 +45,9 @@ public class Test1 {
             Object o = dogClass3.newInstance();
             Dog dog1 = (Dog) o;
 
+            /**
+             * 描述field对象的类叫Field类
+             */
             Field[] fs = dogClass3.getDeclaredFields();
             /*
             不建议这么写，破坏私有了
@@ -49,7 +64,14 @@ public class Test1 {
             }
 
             System.out.println();
+            /**
+             * 描述method对象的类叫Method类
+             */
             Method m1 = dogClass3.getDeclaredMethod("setAge", Integer.class);
+            /**
+             * 描述构造方法对象的类叫Constructor类
+             */
+            Constructor<?>[] constructors = dogClass3.getDeclaredConstructors();
 
             m1.invoke(o, 14);
 
