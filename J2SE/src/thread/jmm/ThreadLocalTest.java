@@ -7,6 +7,13 @@ import java.util.Random;
  * ThreadLocal案例!!!
  * 任何情况下线程都不能直接操作主存
  *
+ * 多个线程操作共享变量，读到自己本地内存(虚拟机栈)后操作并写回主存
+ * 而threadLocal不写回主存，不和别的线程共享，自己线程独有，threadLocal 对应 共享变量
+ * 线程池场景下，线程经常复用，如果不清理自定义threadlocal变量会影响后续业务逻辑或造成内存泄漏
+ * thread对象里有一个threadlocal成员变量，线程操作threadlocal变量时就是操作该线程自己的那一份变量
+ * threadlocalmap类似hashmap，key:threadlocal对象，value:这个threadlocal对象的值
+ * threadlocal弱引用(juc深入104 - 111 未看)
+ *
  *
  */
 public class ThreadLocalTest implements Runnable {

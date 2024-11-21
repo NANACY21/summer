@@ -3,7 +3,10 @@ package thread.jmm;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.locks.ReentrantLock;
 
-/**
+/**AQS:抽象队列同步器
+ * 可重入锁ReentrantLock(为何可重入详见源码)，上锁/解锁机制及线程的竞争锁底层是AQS实现的。ReentrantLock公平/非公平锁区别详见源码
+ *
+ *
  * AQS是AbstractQueuedSynchronizer的简称，它是Java并发包中的一个基础组件
  * AQS是用于实现锁和同步器的公共基础部分的抽象实现
  * 主要解决锁分配给谁的问题
