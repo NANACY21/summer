@@ -59,6 +59,8 @@ main里有线程A start，main线程和A线程执行顺序不确定
 5. TIMED_WAITING(过时不候)
 6. TERMINATED(终结)
 
+线程`就绪态和运行态区别` `等待和阻塞区别`
+
 **线程状态转换**
 调start()后线程不是马上执行，此时该线程要等待cpu来调度，因此start()调用顺序也不是线程执行顺序  
 new thread 线程处于新建状态  

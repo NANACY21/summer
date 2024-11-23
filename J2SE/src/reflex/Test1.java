@@ -15,7 +15,7 @@ import java.lang.reflect.Method;
  * 运行期间，对象的动态改变，（框架的原理：反射、设计模式）
  * 利用反射获取：父类、接口、构造器
  *
- *
+ * 注解 反射 动态修改字节码文件，这三者的区别与联系
  */
 public class Test1 {
 
