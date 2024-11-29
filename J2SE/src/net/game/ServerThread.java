@@ -4,7 +4,7 @@ import java.io.*;
 import java.net.Socket;
 import java.sql.*;
 import java.util.Vector;
-import static str.Tool.getFileData;
+import static base.StringTool.getFileData;
 
 public class ServerThread extends Thread{
     private Socket socket;//关闭该对象->不想和该客户端通信了

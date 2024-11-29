@@ -1,6 +1,10 @@
-package objclone;
+package base;
 
+/**
+ * 狗
+ */
 public class Dog {
+
     private int age;
     private String name;
 

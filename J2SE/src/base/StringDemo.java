@@ -1,14 +1,13 @@
-package str;
+package base;
 
 import java.io.UnsupportedEncodingException;
 
 /**
- *
  * String类:引用类型
  * 1 不能被继承
  * 2 不可变字符串是因为 其属性final修饰char数组!!!因此线程安全
  * 3 字符串常量池不允许存放相同字符串常量,字符串常量池在jvm内存位置,字面量,String内存地址相关
- *
+ * <p>
  * StringBuffer:
  * 1 可变字符串
  * 2 线程安全
@@ -19,10 +18,10 @@ import java.io.UnsupportedEncodingException;
  * 如果字符串拼接对象还是当前地址，如果char数组需要扩容，对象的属性char数组地址也换一下!!!
  * StringBuffer比较相等先toString，再比
  * "li"+"chi" 在底层使用StringBuilder进行拼接
- *
+ * <p>
  * 三者区别：可变性 线程安全性 性能方面 存储位置
  */
-public class Demo1 {
+public class StringDemo {
 
     private String str1 = "6";
     //如果常量池没有"good" 则new String方式会创建2个对象:String对象和字符串常量池对象"good"
@@ -30,11 +29,10 @@ public class Demo1 {
     private char[] ch = {'a', 'b', 'c'};
 
     public static void main(String[] args) {
-        Demo1 demo1 = new Demo1();
+        StringDemo demo1 = new StringDemo();
         demo1.change(demo1.str1, demo1.str2, demo1.ch);
         System.out.print(demo1.str1 + "\t" + demo1.str2 + "\t");
         System.out.println(demo1.ch);
-
 
         String a = "a";
         String b = "a";
@@ -51,7 +49,7 @@ public class Demo1 {
      *
      * @param str1 String类特殊，不是一般对象的引用传递，是值传递
      * @param str2
-     * @param ch 数组每个元素按引用传递
+     * @param ch   数组每个元素按引用传递
      */
     public void change(String str1, String str2, char[] ch) {
         str1 = "666";

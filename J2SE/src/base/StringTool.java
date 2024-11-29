@@ -1,4 +1,4 @@
-package str;
+package base;
 
 import java.io.*;
 import java.text.DecimalFormat;
@@ -16,7 +16,7 @@ import java.util.regex.Pattern;
  * @author 李箎
  *
  */
-public class Tool {
+public class StringTool {
     private static Pattern p1 = Pattern.compile("(?<=\\()[^\\)]+");
     private static Pattern p2 = Pattern.compile("(?<=\\()[^\\)]+");
     private static Pattern p3 = Pattern.compile("(?<=url\\()[^\\)]+");
@@ -401,7 +401,7 @@ public class Tool {
      * @param path
      */
     public static void setFileData(Vector<String> v, String path) {
-        Tool.clear(path);
+        StringTool.clear(path);
         File file = new File(path);
         try {
             FileWriter fw = new FileWriter(file);
@@ -473,7 +473,7 @@ public class Tool {
         /*
         清空.txt文件中内容
          */
-        Tool.clear(path);
+        StringTool.clear(path);
         try {
             fos = new FileOutputStream(path);
             oos = new ObjectOutputStream(fos);
