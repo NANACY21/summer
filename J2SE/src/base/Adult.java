@@ -1,9 +1,9 @@
-package java8.stream;
+package base;
 
 /**
- * 成年
+ * 成年人
  */
-public class Adult extends Person{
+public class Adult extends Person {
     public Adult(int age) {
         super(age);
     }

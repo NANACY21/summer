@@ -1,4 +1,4 @@
-package java8.demo2;
+package annotation.java8;
 
 import java.lang.annotation.Repeatable;
 

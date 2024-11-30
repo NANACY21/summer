@@ -1,5 +1,8 @@
-package java8.demo3;
+package base.generics;
 
+/**
+ * Java范型 Java8新特性
+ */
 public class PersonReal implements Person<Cat> {
 
     @Override

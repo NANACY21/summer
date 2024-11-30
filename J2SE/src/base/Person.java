@@ -1,6 +1,7 @@
-package java8.stream;
+package base;
 
 public class Person {
+
     private int age;
 
     public Person() {

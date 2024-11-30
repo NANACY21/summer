@@ -1,5 +1,7 @@
 package base;//Java基础 一些其余比较杂的知识
 
+import java.io.UnsupportedEncodingException;
+import java.util.Base64;
 import java.util.Random;
 import java.util.Vector;
 
@@ -236,5 +238,21 @@ public class Demo {
         //换成128以内
         Integer i4 = 128;
         System.out.println(i3 == i4);
+    }
+
+    /**
+     * Base64编码解码
+     */
+    public void testBase64() {
+        try {
+            //按照 UTF-8 编码方式获取其字节数组，然后再传递给 Base64 编码器进行编码处理
+            String s = Base64.getEncoder().encodeToString("这是一串字符串".getBytes("utf-8"));
+            System.out.println("加密后的字符串" + s);
+
+            //s解码 s1即为原来的字符串
+            String s1 = new String(Base64.getDecoder().decode(s));
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
     }
 }

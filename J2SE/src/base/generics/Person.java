@@ -1,4 +1,4 @@
-package java8.demo3;
+package base.generics;
 
 public interface Person<T> {
     T get();
