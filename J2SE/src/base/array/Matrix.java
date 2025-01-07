@@ -5,8 +5,10 @@ package base.array;
  */
 public class Matrix {
 
-    private int row;//行数
-    private int col;//列数
+    //行数
+    private int row;
+    //列数
+    private int col;
     private double value[][];//值
 
     Matrix() {
