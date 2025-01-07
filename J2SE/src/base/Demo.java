@@ -1,6 +1,8 @@
 package base;//Java基础 一些其余比较杂的知识
 
 import java.io.UnsupportedEncodingException;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Base64;
 import java.util.Random;
 import java.util.Vector;
@@ -254,5 +256,13 @@ public class Demo {
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
+    }
+
+    public void testBigDecimal() {
+        BigDecimal b1 = new BigDecimal("1.0");
+        BigDecimal b2 = new BigDecimal("0.9");
+        BigDecimal b3 = new BigDecimal("0.8");
+        BigDecimal res = b1.divide(b2, 10, RoundingMode.HALF_UP);
+
     }
 }
