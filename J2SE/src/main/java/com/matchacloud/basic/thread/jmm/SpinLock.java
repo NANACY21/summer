@@ -1,4 +1,4 @@
-package thread.jmm;
+package com.matchacloud.basic.thread.jmm;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicReference;

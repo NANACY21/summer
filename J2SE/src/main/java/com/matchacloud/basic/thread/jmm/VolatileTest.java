@@ -1,4 +1,4 @@
-package thread.jmm;//JMM(Java内存模型)相关!!!
+package com.matchacloud.basic.thread.jmm;//JMM(Java内存模型)相关!!!
 
 /**
  * volatile关键字保证变量可见性示例!!!

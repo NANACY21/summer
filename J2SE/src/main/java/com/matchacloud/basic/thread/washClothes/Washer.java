@@ -1,4 +1,4 @@
-package thread.washClothes;
+package com.matchacloud.basic.thread.washClothes;
 
 /**洗衣工
  */

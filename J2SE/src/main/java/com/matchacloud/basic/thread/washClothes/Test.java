@@ -1,4 +1,4 @@
-package thread.washClothes;
+package com.matchacloud.basic.thread.washClothes;
 import java.util.Vector;
 
 /**同步锁：两个方法锁住同一个对象->这两个方法不能同时执行

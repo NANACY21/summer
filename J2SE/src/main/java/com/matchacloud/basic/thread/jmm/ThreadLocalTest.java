@@ -1,4 +1,4 @@
-package thread.jmm;
+package com.matchacloud.basic.thread.jmm;
 
 import java.text.SimpleDateFormat;
 import java.util.Random;

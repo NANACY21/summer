@@ -1,4 +1,4 @@
-package thread.worldClock;
+package com.matchacloud.basic.thread.worldClock;
 import javax.swing.*;
 /*
 JFrame是Frame的子类，从Frame继承的方法：setTitle()

@@ -1,4 +1,4 @@
-package thread.worldClock;
+package com.matchacloud.basic.thread.worldClock;
 
 import javax.swing.*;
 import java.awt.*;

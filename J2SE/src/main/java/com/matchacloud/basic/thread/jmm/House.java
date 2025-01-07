@@ -1,6 +1,8 @@
-package thread.jmm;
+package com.matchacloud.basic.thread.jmm;
 
-import thread.threadpool.ThreadPoolFactory;
+
+
+import com.matchacloud.basic.thread.threadpool.ThreadPoolFactory;
 
 import java.util.concurrent.ExecutorService;
 

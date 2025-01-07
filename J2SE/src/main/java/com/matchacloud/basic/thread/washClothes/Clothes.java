@@ -1,4 +1,4 @@
-package thread.washClothes;
+package com.matchacloud.basic.thread.washClothes;
 
 public class Clothes {
     private String name;

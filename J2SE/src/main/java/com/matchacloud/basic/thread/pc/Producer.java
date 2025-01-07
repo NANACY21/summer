@@ -1,4 +1,4 @@
-package thread.pc;
+package com.matchacloud.basic.thread.pc;
 
 /**
  * 生产者 用于生产数据，入栈

@@ -1,4 +1,4 @@
-package thread.lock;
+package com.matchacloud.basic.thread.lock;
 
 /**
  * 同步关键字:排他锁(锁同一个对象则不能同时执行) 可重入锁 非公平锁

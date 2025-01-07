@@ -1,4 +1,4 @@
-package thread.pc;
+package com.matchacloud.basic.thread.pc;
 
 /**
  * 一个栈，不可能同时出栈入栈

@@ -1,4 +1,4 @@
-package thread.worldClock;
+package com.matchacloud.basic.thread.worldClock;
 import java.awt.*;
 import java.util.Date;
 //若自己写一个无参构造方法，不初始化"Vector"，则报错

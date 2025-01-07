@@ -1,4 +1,4 @@
-package thread.washClothes;
+package com.matchacloud.basic.thread.washClothes;
 
 /**晾衣工
  * 晾衣工如果判断衣服的状态以晾衣，则体现不出同步锁了

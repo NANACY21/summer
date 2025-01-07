@@ -1,4 +1,4 @@
-package thread.pc;
+package com.matchacloud.basic.thread.pc;
 
 /**
  * 消费者 用于从栈中取数据

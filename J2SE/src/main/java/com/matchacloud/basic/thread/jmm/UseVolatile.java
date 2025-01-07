@@ -1,4 +1,4 @@
-package thread.jmm;
+package com.matchacloud.basic.thread.jmm;
 
 /**
  * volatile适用场景:读多写少!!!

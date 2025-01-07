@@ -1,4 +1,4 @@
-package thread.lock;
+package com.matchacloud.basic.thread.lock;
 
 import java.util.concurrent.locks.ReentrantLock;
 
