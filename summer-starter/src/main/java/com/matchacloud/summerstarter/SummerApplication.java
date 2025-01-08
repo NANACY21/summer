@@ -8,6 +8,7 @@ public class SummerApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SummerApplication.class, args);
+		System.out.println("summer项目启动成功!");
 	}
 
 }

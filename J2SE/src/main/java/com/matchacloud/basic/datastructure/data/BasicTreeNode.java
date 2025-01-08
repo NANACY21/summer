@@ -1,8 +1,11 @@
 package com.matchacloud.basic.datastructure.data;
 
+import lombok.Data;
+
 /**
  * 基础树节点
  */
+@Data
 public abstract class BasicTreeNode {
     /**
      * id
@@ -27,5 +30,5 @@ public abstract class BasicTreeNode {
     /**
      * 层级
      */
-    private boolean level;
+    private int level;
 }
