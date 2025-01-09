@@ -1,6 +1,6 @@
 package com.matchacloud.basic.datastructure;
 
-import com.matchacloud.basic.datastructure.data.TreeNode;
+import com.matchacloud.basic.datastructure.pojo.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,7 +1,7 @@
 package com.matchacloud.basic.datastructure;
 
 
-import com.matchacloud.basic.datastructure.data.SqList;
+import com.matchacloud.basic.datastructure.pojo.SqList;
 
 /**
  * 查找算法

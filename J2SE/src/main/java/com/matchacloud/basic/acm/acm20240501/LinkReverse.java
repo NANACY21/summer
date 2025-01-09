@@ -1,7 +1,7 @@
 package com.matchacloud.basic.acm.acm20240501;
 
 
-import com.matchacloud.basic.datastructure.data.LinkNode;
+import com.matchacloud.basic.datastructure.pojo.LinkNode;
 
 /**
  * 单向链表反转

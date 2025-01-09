@@ -1,4 +1,4 @@
-package com.matchacloud.basic.datastructure.data;
+package com.matchacloud.basic.datastructure.pojo;
 
 import lombok.Data;
 
