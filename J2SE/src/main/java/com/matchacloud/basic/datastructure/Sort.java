@@ -1,5 +1,7 @@
 package com.matchacloud.basic.datastructure;
 
+import java.util.Arrays;
+
 /**
  * 线性数据结构8种排序算法
  * 给出某一种排序算法要认识是哪种排序算法
@@ -7,33 +9,38 @@ package com.matchacloud.basic.datastructure;
 public class Sort {
 
     /**
-     * 直接插入排序 内部排序 插入排序 ok
-     * 设第一个数有序，
-     * 将一个记录插入到已经排好序的有序表中，从而得到一个新的、记录数增1的有序表
+     * 直接插入排序
+     * 一开始默认第一个元素有序，从第二个元素开始遍历，把元素插入已经有序的子序列中。
      *
      * @param array 线性数据结构
      */
-    public static void insertSort(int[] array) {
+    public static int[] insertSort(int[] array) {
 
-        int temp;
-        //依次插入
-        for (int i = 1; i < array.length; ++i) {
-            //"<",需将索引i处元素插入有序子表
-            if (array[i] < array[i - 1]) {
-                temp = array[i];//待插入的记录暂存到监视哨中
-                array[i] = array[i - 1];//元素后移
-                int j;
-                //从后向前寻找插入位置 遍历已有序子表
-                for (j = i - 1; j > -1 && temp < array[j]; --j) {
-                    array[j + 1] = array[j];//记录逐个后移,直到找到插入位置
-                }
-                array[j + 1] = temp;//带插入记录插入到正确位置
+        // 数组的长度
+        int n = array.length;
+
+        // 从第二个元素开始遍历数组，因为第一个元素默认是已排序的
+        for (int i = 1; i < n; i++) {
+            // 取出当前要插入的元素
+            int current = array[i];
+            // 用于比较的位置，从当前元素的前一个位置开始
+            int j = i - 1;
+
+            // 从后往前遍历已排序的部分，找到当前元素应该插入的位置
+            while (j >= 0 && array[j] > current) {
+                // 如果当前比较的元素大于要插入的元素，将其向后移动一位
+                array[j + 1] = array[j];
+                // 继续向前比较
+                j--;
             }
+            // 将当前元素插入到正确的位置
+            array[j + 1] = current;
         }
+        return array;
     }
 
     /**
-     * 折半插入排序 内部排序 插入排序 ok
+     * 折半插入排序
      * 还是设第一个数有序，
      * 将元素插入已有序子表中，由于有序，插入点折半查找
      *
@@ -76,7 +83,7 @@ public class Sort {
      * @param array
      * @param dk
      */
-    public static void shellInsert(int[] array, int dk) {
+    private static void shellInsert(int[] array, int dk) {
         int i, j;
         int temp;
         for (i = dk ; i < array.length; ++i) {
@@ -94,7 +101,7 @@ public class Sort {
     }
 
     /**
-     * 希尔排序 内部排序 插入排序 难
+     * 希尔排序 难
      *
      * @param array
      * @param dt 希尔排序辅助数组 容量要大一些
@@ -113,7 +120,7 @@ public class Sort {
     }
 
     /**
-     * 冒泡排序，与选择排序相似 内部排序 交换排序 ok
+     * 冒泡排序，与选择排序相似
      * 相邻的才比较
      * 时间复杂度O(n^2)
      */
@@ -139,7 +146,7 @@ public class Sort {
      * @param rightIndex
      * @return
      */
-    public static int partition(int[] array, int leftIndex, int rightIndex) {
+    private static int partition(int[] array, int leftIndex, int rightIndex) {
 
         int temp = array[leftIndex];//用子表的第一个记录做枢轴记录
         int pivot = array[leftIndex];//枢轴记录保存在pivot中
@@ -159,7 +166,7 @@ public class Sort {
     }
 
     /**
-     * 快速排序 内部排序 交换排序
+     * 快速排序
      * 是冒泡排序的改进
      * @param array
      * @param leftIndex 首个元素索引
@@ -179,7 +186,7 @@ public class Sort {
     }
 
     /**
-     * 简单选择排序 内部排序 选择排序 ok
+     * 简单选择排序
      *
      * @param array
      */
@@ -212,7 +219,7 @@ public class Sort {
      * @param leftIndex
      * @param rightIndex
      */
-    public static void heapAdjust(int[] array, int leftIndex, int rightIndex) {
+    private static void heapAdjust(int[] array, int leftIndex, int rightIndex) {
         //假设L.elem[left+1...right]已经是堆,将L.elem[left...right]调整为以L.elem[left]为根的大根堆
         int rc, j;
         rc = array[leftIndex];
@@ -234,7 +241,7 @@ public class Sort {
     /**堆排序辅助算法
      * @param array
      */
-    public static void creatHeap(int[] array) {
+    private static void creatHeap(int[] array) {
 
         //把无序序列L.elem[1...L.right]建成大根堆
         int n, i;
@@ -246,7 +253,7 @@ public class Sort {
     }
 
     /**
-     * 堆排序 内部排序 选择排序
+     * 堆排序
      *
      * @param array
      */
@@ -271,7 +278,7 @@ public class Sort {
      * @param midIndex
      * @param rightIndex
      */
-    public static void merge(int[] array, int leftIndex, int midIndex, int rightIndex) {
+    private static void merge(int[] array, int leftIndex, int midIndex, int rightIndex) {
 
         int i = leftIndex;
         int j = midIndex + 1;
@@ -296,7 +303,7 @@ public class Sort {
     }
 
     /**
-     * 2-路归并排序 内部排序 归并排序
+     * 2-路归并排序
      *
      * 时间复杂度O(nlogn) 空间复杂度 O(n) 是稳定排序
      * @param array
@@ -343,5 +350,10 @@ public class Sort {
             newSqList[index] = value;
         }
         return newSqList;
+    }
+
+    public static void main(String[] args) {
+        int[] array = { 9, 7, 10, 6, 5, 8, 1, 3, 2 };
+        System.out.println(Arrays.toString(insertSort(array)));
     }
 }
