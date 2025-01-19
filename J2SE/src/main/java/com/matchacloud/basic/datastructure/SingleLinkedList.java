@@ -165,5 +165,12 @@ public class SingleLinkedList {
         list.printList();
         list.delete(2);
         list.printList();
+//        SingleLinkedList linkedList = SingleLinkedList.createLinkedList(1, 2, 3, 4, 5);
+//        SingleLinkedList.printList(linkedList);
+//
+//        SingleLinkedList reversedLink = SingleLinkedList.reverseLink(linkedList);
+//        SingleLinkedList.printList(reversedLink);
+
+
     }
 }
