@@ -62,6 +62,9 @@ SpringCloud提供了一套完整的微服务解决方案，其内容包含:
 
 **springCloud具体组件讲解**
 
+**Nacos**  
+服务发现与配置
+
 **Eureka**
 
 服务发现与注册框架 用于注册中心，其它注册中心组件:ZooKeeper Consul  阿里巴巴Nacos  
