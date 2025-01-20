@@ -1,5 +1,7 @@
 package com.matchacloud.summerstarter.config;
 import com.matchacloud.summerstarter.student.domain.entity.User;
+import com.matchacloud.summerstarter.student.utils.ConstPool;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -14,16 +16,12 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 登录相关
+ */
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
-
-    private Map<String, User> userMap = new HashMap<>();
-
-    public SecurityConfig() {
-        // 模拟用户存储，实际应用中可使用数据库存储用户信息
-        userMap.put("user1", new User("user1", new BCryptPasswordEncoder().encode("password1")));
-    }
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -56,9 +54,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     /**
      * 查询数据库
      * @param username
-     * @return
+     * @return 数据库中该用户的信息
      */
     public User getUser(String username) {
-        return userMap.get(username);
+        if (StringUtils.isEmpty(username)) {
+            return null;
+        }
+        if (username.equals(ConstPool.userName)) {
+            return new User(username, ConstPool.password, ConstPool.role);
+        }
+        return null;
     }
 }

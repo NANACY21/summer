@@ -3,6 +3,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+/**
+ * 用户
+ */
 @Data
 @AllArgsConstructor
 public class User {
@@ -11,6 +14,9 @@ public class User {
 
     private String password;
 
+    /**
+     * 角色
+     */
     private String role;
 
     /**
