@@ -42,10 +42,11 @@ mysql安装到Linux后是一个目录 熟悉Linux下mysql目录结构!!!
 
 **mysql逻辑架构**(从软件实现的角度看mysql!!!类似web系统MVC结构)
 mysql是c/s架构 即客户端/服务器架构 客户端可以是jdbc连接、navicat等  
-mysql逻辑架构分为3层  
+mysql逻辑架构分为4层  
 1. 连接层
 2. 服务层
-3. 引擎层
+3. 存储引擎层
+4. 硬件层 系统文件
 
 mysql逻辑架构组件有：  
 - `连接池` `基础服务组件` `sql接口` `解析器` `优化器(在服务层)` `插件式存储引擎` `文件系统`
@@ -432,9 +433,6 @@ myisam存储引擎不支持事务!!!
     undo的另一个作用是MVCC，即在InnoDB存储引擎中MVCC的实现是通过undo来完成   
     当用户读取一行记录时，若该记录已经被其他事务占用，当前事务可以通过undo。读取之前的行版本信息，以此实现非锁定读取。  
 
-`redo log` 跟`bin log`的区别，redo log是存储引擎层产生的，而bin log是 数据库层产生的。  
-假设一个事务，对表做10万行的记录插入，在这个过程中，一直不断的往redolog顺序记录，  
-而bin log不会记录，直到这个事务提交，才会一次写入到bin log文件中!!!  
 
 mysql变量 innodb_flush_log_at_trx_commit
 为什么不需要undo log buffer？
@@ -554,19 +552,31 @@ readview解决幻读问题
     所有用户的连接开始时间和截止时间、发给 MySQL 数据库服务器的所有SQL指令等  
     当我们的数据发生异常时，查看通用查询日志，还原操作时的具体场景，可以帮助我们准确定位问题。  
 5. `错误日志`
-6. `二进制日志`
-    bin log show variables like '%log_bin%'  
-    也叫作数据库变更逻辑日志(update log)。  
-    它记录了数据库所有执行的DDL和DML等数据库更新事件的语句。  
-    但是不包含没有修改任何数据的语句(如数据查询语句select.show等)。  
-    二进制日志用于:1.`主从服务器之间的数据同步` 2.`服务器遇到故障时数据的无损失恢复`  
-    每次重启新生成二进制日志文件
-    删除二进制日志文件  
-    `show binlog events in 'atguigu-bin. 000002' from 468 limit 1,3;`  
-    `show binary logs;`  
-    `flush logs;`  
-    bin log写入机制
-    binlog 格式设置
+6. `二进制日志 bin log`  
+    也叫作数据库变更逻辑日志(update log)，它记录了数据库所有执行的DDL和DML等数据库更新事件的语句  
+    但是不包含没有修改任何数据的语句(如数据查询语句select.show等)  
+    每次重启会新生成二进制日志文件  
+    
+    一些bin log有关的命令：
+    1. 查看bin log有关的系统变量：`show variables like '%log_bin%';` 比如查看是否启用了二进制日志、二进制日志文件位置等
+    2. 删除二进制日志文件：
+    3. 查看二进制日志文件的内容(原始文件内容为二进制格式 加以格式转换并且格式化了)：`show binlog events in 'atguigu-bin. 000002' from 468 limit 1,3;`
+    4. 显示二进制日志文件列表：`show binary logs;`
+    5. `flush logs;`：不再使用当前二进制日志文件记录，新建一个二进制日志文件记录。该命令会附带的做bin log刷盘行为
+
+    二进制日志文件数据记录&持久化流程：
+    1. bin log写入机制：写入bin log缓存
+    2. bin log刷盘机制：binlog缓存内容持久化到磁盘上的二进制日志文件里
+    
+    二进制日志用于:  
+    1. `主从服务器之间的数据同步比如主从复制`
+    2. `服务器遇到故障时数据的无损失恢复`
+    
+    binlog 格式设置方式：
+    binlog 格式类型：1.STATEMENT 格式，2.ROW 格式 3.MIXED 格式
+    1. 全局设置：`SET GLOBAL binlog_format = 'ROW';`
+    2. 会话设置：`SET SESSION binlog_format = 'ROW';`
+    查看binlog格式：`SHOW VARIABLES LIKE 'binlog_format';`
 
 7. `中继日志`：relay log
     中继日志只在主从服务架构的从服务器上存在  
@@ -574,13 +584,16 @@ readview解决幻读问题
     并且把读取到的信息写入 本地的日志文件 中，这个从服务器本地的日志文件就叫 中继日志。  
     然后，从服务器读取中继日志，并根据中继日志的内容对从服务器的数据进行更新，完成主从复制  
 
-**binlog与redolog对比**
-redo log 它是物理日志，记录内容是“在某个数据页上做了什么修改”，属于InnoDB 存储引擎层产生的。  
-而binlog 是逻辑日志，记录内容是语句的原始逻辑，类似于“给ID=2这一行的c字段加1”，属于MySQLServer 层。  
-虽然它们都属于持久化的保证，但是则重点不同。  
-redo log让InnoDB存储引擎拥有了崩溃恢复能力。  
-binlog保证了MySQL集群架构的数据一致性。  
-事务只有提交才会写入bin log 。事务里每条语句执行完都会实时写入redo log  
+**bin log与redo log对比&区别**
+`redo log`是物理日志，记录内容是 `在某个数据页上做了什么修改`，是InnoDB `存储引擎层`产生的  
+`bin log`是逻辑日志，记录内容是语句的原始逻辑，类似于 `给ID=2这一行的c字段加1`，属于MySQL的`服务层`  
+虽然它们都属于持久化的保证，但是则重点不同  
+redo log让InnoDB存储引擎拥有了崩溃恢复能力  
+binlog保证了MySQL集群架构的数据一致性  
+事务只有提交才会写入bin log 。事务里每条语句执行完都会实时写入redo log
+
+假设一个事务，对表做10万行的记录插入，在这个过程中，一直不断的往redolog顺序记录，  
+而bin log不会记录，直到这个事务提交，才会一次写入到bin log文件中!!!
 
 
 **二阶段提交**redo log分两步写!!!
