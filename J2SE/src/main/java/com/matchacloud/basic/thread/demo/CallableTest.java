@@ -1,4 +1,4 @@
-package thread.demo;
+package com.matchacloud.basic.thread.demo;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
@@ -9,6 +9,7 @@ import java.util.concurrent.FutureTask;
  * Runnable接口有实现类FutureTask,FutureTask构造可以传递Callable!!!FutureTask对象就是一个线程
  */
 public class CallableTest implements Callable<Integer> {
+
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         //未来任务

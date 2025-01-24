@@ -1,4 +1,4 @@
-package thread.demo;
+package com.matchacloud.basic.thread.demo;
 
 public class TestLock {
 
