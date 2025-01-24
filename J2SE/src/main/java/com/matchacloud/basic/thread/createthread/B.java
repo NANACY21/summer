@@ -1,4 +1,4 @@
-package com.matchacloud.basic.thread.demo3;
+package com.matchacloud.basic.thread.createthread;
 
 public class B extends Thread{
     public void run(){

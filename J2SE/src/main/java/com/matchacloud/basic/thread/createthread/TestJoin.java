@@ -1,4 +1,4 @@
-package com.matchacloud.basic.thread.demo;
+package com.matchacloud.basic.thread.createthread;
 
 /**ok
  * join方法示例

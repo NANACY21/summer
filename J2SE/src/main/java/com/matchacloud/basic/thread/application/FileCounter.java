@@ -1,9 +1,10 @@
-package com.matchacloud.basic.thread.demo;
+package com.matchacloud.basic.thread.application;
 import java.io.File;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.atomic.AtomicInteger;
 
-/**文件计数器
+/**
+ * 多线程实际应用之 文件计数器
  * 多线程计算文件数
  */
 public class FileCounter {

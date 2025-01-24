@@ -1,4 +1,4 @@
-package com.matchacloud.basic.thread.demo;
+package com.matchacloud.basic.thread.lock;
 
 /**ok
  * 死锁示例

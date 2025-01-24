@@ -1,4 +1,4 @@
-package com.matchacloud.basic.thread.demo;
+package com.matchacloud.basic.thread.createthread;
 
 /**ok
  * 创建线程（Thread对象）的3种方式
