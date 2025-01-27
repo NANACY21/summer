@@ -31,7 +31,7 @@ public class House {
     }
 
     public static void main(String[] args) {
-        ExecutorService fixedThreadPool = ThreadPoolFactory.getFixedThreadPool(3);
+        ExecutorService fixedThreadPool = ThreadPoolFactory.FIXED_THREAD_POOL;
         House house = new House();
         for (int i = 0; i < 10; i++) {
 

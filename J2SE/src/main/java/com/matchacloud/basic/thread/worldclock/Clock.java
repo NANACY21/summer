@@ -1,4 +1,4 @@
-package com.matchacloud.basic.thread.worldClock;
+package com.matchacloud.basic.thread.worldclock;
 import java.awt.*;
 import java.util.Date;
 
