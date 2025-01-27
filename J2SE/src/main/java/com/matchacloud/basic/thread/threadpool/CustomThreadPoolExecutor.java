@@ -44,6 +44,15 @@ public class CustomThreadPoolExecutor {
     private CustomThreadPoolExecutor() {}
 
     /**
+     * 一些说明：
+     * 每次调用该方法能确保线程池对象存在
+     * Java 中静态代码块的特性是在类被加载的时候就会执行，而且只会执行一次
+     * CustomThreadPoolExecutor类被卸载了 线程池对象才会消失
+     * CustomThreadPoolExecutor 类通常是由系统类加载器加载的，
+     * 系统类加载器在应用程序的整个运行期间都存在，不会被垃圾回收，
+     * 所以 CustomThreadPoolExecutor 类也不会被卸载，线程池对象会一直存在，直到应用程序结束。
+     *
+     *
      * 提交任务到线程池执行
      * @param task 要执行的任务
      */
@@ -65,6 +74,8 @@ public class CustomThreadPoolExecutor {
      * 关闭线程池
      */
     public static void shutdown() {
+        //调用 shutdown() 后，线程池不会再接受新任务，但会把已经提交的两个任务执行完毕，之后线程池才会真正关闭
+        //和shutdownNow()都是 不再接收新任务 不再使用该线程池 但并不直接影响线程池对象在内存中的存在
         threadPool.shutdown();
     }
 
@@ -72,6 +83,11 @@ public class CustomThreadPoolExecutor {
      * 立即关闭线程池
      */
     public static void shutdownNow() {
+        //该方法会尝试立即停止线程池。
+        // 它会向正在执行任务的线程发送中断信号（通过调用线程的 interrupt() 方法），
+        // 尝试终止正在执行的任务，并且返回等待队列中尚未开始执行的任务列表。
+        // 不过，对于正在执行的任务，不一定能保证立即停止，
+        // 因为线程是否响应中断取决于任务代码中是否对中断进行了处理。
         threadPool.shutdownNow();
     }
 
