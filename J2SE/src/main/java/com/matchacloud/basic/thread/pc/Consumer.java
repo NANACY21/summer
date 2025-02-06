@@ -5,7 +5,11 @@ package com.matchacloud.basic.thread.pc;
  */
 public class Consumer extends Thread {
 
-    private Stack stack;//依赖
+    /**
+     * 消费者从这个栈里拿数据
+     */
+    private Stack stack;
+
     private boolean flag;
 
     public Consumer(Stack stack) {

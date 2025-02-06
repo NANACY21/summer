@@ -7,7 +7,11 @@ package com.matchacloud.basic.thread.pc;
  */
 public class Producer extends Thread {
 
+    /**
+     * 生产者放数据到这个栈里
+     */
     private Stack stack;
+
     private boolean flag;
 
     public Producer(Stack stack) {

@@ -6,10 +6,10 @@ package com.matchacloud.basic.thread.pc;
 public class Test {
 
     public static void main(String[] args) {
-        Stack stack = new Stack();//一个实例
-        Producer p = new Producer(stack);
-        Consumer c = new Consumer(stack);
-        p.start();
-        c.start();
+        Stack stack = new Stack();
+        Producer producer = new Producer(stack);
+        Consumer consumer = new Consumer(stack);
+        producer.start();
+        consumer.start();
     }
 }
