@@ -10,6 +10,46 @@ public class DeadLock {
     private static final Object lock1 = new Object();
     private static final Object lock2 = new Object();
 
+    private String str1 = "message1";
+    private String str2 = "message2";
+
+    /**
+     * 死锁示例
+     */
+    public void test() {
+        new Thread(() -> {
+            synchronized (str1) {
+                while (true) {
+                    System.out.println("str1:" + str1);
+                    try {
+                        Thread.sleep(2000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    synchronized (str2) {
+                        System.out.println("str2:" + str2);
+                    }
+                }
+
+            }
+        }).start();
+        new Thread(() -> {
+            while (true) {
+                synchronized (str2) {
+                    System.out.println("str2:" + str2);
+                    try {
+                        Thread.sleep(2000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    synchronized (str1) {
+                        System.out.println("str1:" + str1);
+                    }
+                }
+            }
+        }).start();
+    }
+
     public static void main(String[] args) {
 
         Thread t1 = new Thread(new Runnable() {
@@ -38,5 +78,7 @@ public class DeadLock {
 
         t1.start();
         t2.start();
+
+        //new DeadLock().test();
     }
 }
