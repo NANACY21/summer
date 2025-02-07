@@ -4,48 +4,43 @@ import java.io.File;
 import java.io.IOException;
 
 /**
- * 别运行
+ * File类讲解
  */
-public class Demo1 {
+public class FileDemo {
 
-    public static final String A_TXT = "D:\\allproject\\projects\\J2SE\\src\\base\\io\\a.txt";
-    public static final String UNIVERSITY_3_2 = "D:\\university\\3_2";
+    public static final String A_TXT_PATH = PathPool.A_TXT_PATH;
+    public static final String DIR_PATH = PathPool.DIR_PATH;
     public static final String DOC = "D:\\university\\3_2\\bankms\\规范_论文模板_中伦理专题.doc";
 
     public static void main(String[] args) {
 
-        /**
-         * 这不会创建文件，
-         * 输出File对象为该文件指针的路径
-         */
-        File file = new File(A_TXT);
+        //这不会创建文件，输出File对象为该文件指针的路径
+        File file = new File(A_TXT_PATH);
 
         //URI uri = URI.create("http://java2s.com");
 
         try {
-            /**
-             * 文件不存在时->创新文件->返回是否已创建。
-             * 文件已存在时->不覆盖，不创建
-             */
+            //文件不存在时：创建新文件 返回是否已创建。文件已存在时：不覆盖，不创建
             boolean newFile = file.createNewFile();
 
             //在指定目录下创建临时txt文件，否则，创建在系统的临时目录
-            File f5 = File.createTempFile("aaa", ".txt", new File(UNIVERSITY_3_2));
+            File tempFile = File.createTempFile("temp", ".txt", new File(DIR_PATH));
         } catch (IOException e) {
             e.printStackTrace();
         }
+        //输出jdk安装路径
+        System.out.println(System.getenv("JAVA_HOME"));
 
-        System.out.println(System.getenv("JAVA_HOME"));//输出jdk安装路径
-
-        //确保file变量使用完了，否则会覆盖了
-        file = new File(UNIVERSITY_3_2);
-        file.exists();
+        //确保file变量使用完了，否则会覆盖
+        file = new File(DIR_PATH);
+        boolean exists = file.exists();
         //file.delete();
-
-        String[] list = file.list();//得到file目录下所有目录和文件的名字
-//        for(int i=0;i<list.length;i++){
-//            System.out.println(list[i].toString()+"565");
-//        }
+        //得到file目录下所有目录和文件的名字
+        String[] list = file.list();
+        System.out.println();
+        for(int i=0;i<list.length;i++){
+            System.out.println(list[i]);
+        }
         for (String name : list) {
             File f1 = new File(file, name);//文件指针
             System.out.println(file + "\t\t" + f1.getAbsoluteFile());

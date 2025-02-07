@@ -1,4 +1,6 @@
 package com.matchacloud.basic.thread.application;
+import com.matchacloud.basic.io.PathPool;
+
 import java.io.File;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -12,7 +14,7 @@ public class FileCounter {
     /**
      * 目录路径
      */
-    public static final String DIR_PATH = "/Users/lichi/projectList/self/matcha";
+    public static final String DIR_PATH = PathPool.MATCHA_DIR;
 
     /**
      * 队列

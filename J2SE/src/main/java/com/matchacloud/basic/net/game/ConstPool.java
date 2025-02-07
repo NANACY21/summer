@@ -1,5 +1,7 @@
 package com.matchacloud.basic.net.game;
 
+import com.matchacloud.basic.io.PathPool;
+
 import java.util.Vector;
 
 /**
@@ -8,12 +10,12 @@ import java.util.Vector;
 public class ConstPool {
 
     //客户端1的所有文件放在该目录
-    private static final String ClientDir = "D:\\allproject\\projects\\J2SE\\src\\base\\net\\game\\client";
+    private static final String ClientDir = PathPool.CLIENT_DIR;
     //客户端2的所有文件放在该目录
-    private static final String Client2Dir = "D:\\allproject\\projects\\J2SE\\src\\base\\net\\game\\client2";
+    private static final String Client2Dir = PathPool.CLIENT2_DIR;
 
     //服务器端所有文件放在该目录
-    public static final String SERVER_DIR = "D:\\allproject\\projects\\J2SE\\src\\base\\net\\game\\server";
+    public static final String SERVER_DIR = PathPool.SERVER_DIR;
     private static Vector<RoutingTableTuple> r1 = new Vector<RoutingTableTuple>();//路由器R1的路由表
     private static Vector<RoutingTableTuple> r2 = new Vector<RoutingTableTuple>();//路由器R2的路由表
     private static Vector<RoutingTableTuple> r3 = new Vector<RoutingTableTuple>();//路由器R3的路由表
