@@ -3,3 +3,4 @@ J2SE/docs/mix/面试题.txt
 J2SE/docs/distributed_system/RuoYi_Vue_system_structure.md
 target/
 J2SE/src/main/java/com/matchacloud/basic/io/PathPool.java
+J2SE/src/main/java/com/matchacloud/basic/io/download/
