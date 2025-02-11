@@ -1,9 +1,10 @@
 package com.matchacloud.basic.annotation;//主要!!!
 
 /**
- * 注解解析
+ * 注解解析(处理注解)
  */
 public class Test1 {
+
     public static void main(String[] args) {
         //1.使用反射来获取Bookshelf的class对象
         Class<BookShelf> bookShelfClass = BookShelf.class;
