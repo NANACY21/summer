@@ -17,6 +17,9 @@
 2. 字符流(Reader/Writer) 以字符为单位处理数据
 
 
+**输入流**  
+`输入流`：数据是流向`内存`的，例如`外存数据`、`网络中的文件`与内存建立的连接，数据流向内存。
+
 **字节流**  
 基类：InputStream/OutputStream
 1. FileInputStream / FileOutputStream：用于文件的字节输入和输出!!!

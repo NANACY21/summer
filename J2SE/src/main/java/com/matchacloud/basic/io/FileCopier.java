@@ -5,7 +5,7 @@ import java.io.*;
 /**
  * 文件输入/输出字节/字符流示例
  */
-public class InputStreamDemo {
+public class FileCopier {
 
     /**
      * 文件复制 读入源文件到内存，内存数据写出到目标文件
