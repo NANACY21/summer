@@ -1,5 +1,6 @@
 package com.matchacloud.summerstarter.student.service;
 
+import com.matchacloud.summerstarter.student.annotation.Loggable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.EnableScheduling;
@@ -23,6 +24,7 @@ public class ScheduledTasks {
     /**
      * 每 5 秒执行一次
      */
+    @Loggable
     @Scheduled(fixedRate = 5000)
     public void reportCurrentTime() {
         // 记录不同级别的日志
