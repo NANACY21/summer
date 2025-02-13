@@ -19,6 +19,8 @@ import java.util.concurrent.atomic.AtomicStampedReference;
  * 如果期间主内存的值被其他线程修改过，那么cas却认为主内存的值没有变化，从而导致问题
  * 这就需要弄成类似于数据行有改动就更新时间戳)
  *
+ * cas一定也是某一环节是cpu原语，从而保证的原子性
+ *
  */
 public class CASTest {
     public static void main(String[] args) {
