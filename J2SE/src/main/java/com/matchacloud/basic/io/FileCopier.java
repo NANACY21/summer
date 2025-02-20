@@ -9,12 +9,13 @@ public class FileCopier {
 
     /**
      * 文件复制 读入源文件到内存，内存数据写出到目标文件
+     * 文件复制速度限制最高10KB/s
      *
      * @param srcPath  源文件绝对路径
      * @param destPath 目标文件绝对路径
      * @return
      */
-    public static boolean fileCopy(String srcPath, String destPath) {
+    public static boolean fileCopyLimitSpeed(String srcPath, String destPath) {
         InputStream inputStream = null;
         OutputStream outputStream = null;
         try {
@@ -28,14 +29,43 @@ public class FileCopier {
             //缓冲区，要设置合理的缓冲区
             byte[] buffer = new byte[512];
 
+            long startTime = System.currentTimeMillis();
+            long totalBytesWritten = 0;
+
             //读外存数据到内存 流经这个通道 读取到的数据存储在 buffer 变量，len变量是返回的实际读取的字节数
             //原有A字节，读了B字节，读多了，会有空格
             while ((len = inputStream.read(buffer)) != -1) {
-                System.out.println(len);
+                //System.out.println(len);
                 //off:把buffer数组写入外存 从数组的指定下标开始写数据 len:要写入的该数组的长度
                 //读多长，写多长，最长512字节
                 outputStream.write(buffer, 0, len);
+                totalBytesWritten += len;
+
+                // 计算当前已经过去的时间（秒）
+                long elapsedTime = System.currentTimeMillis() - startTime;
+                if (elapsedTime > 0) {
+                    // 计算当前的写入速度（字节/秒）
+                    double currentSpeed = (totalBytesWritten * 1000.0) / elapsedTime;
+                    if (currentSpeed > Downloader.MAX_SPEED) {
+                        // 如果速度超过了最高速度，计算需要休眠的时间
+                        long sleepTime = (totalBytesWritten / Downloader.MAX_SPEED * 1000) - elapsedTime;
+                        if (sleepTime > 0) {
+                            try {
+                                // 线程休眠以降低速度
+                                Thread.sleep(sleepTime);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }
+                }
             }
+
+            long endTime = System.currentTimeMillis();
+            long thisSpeed = (totalBytesWritten * 1000) / (1024 * (endTime - startTime));
+            System.out.println("此次文件复制速度:" + thisSpeed + "KB/秒");
+            System.out.println("此次文件复制用时:" + (endTime - startTime) / 1000 + "秒");
+            System.out.println("此次文件大小:" + totalBytesWritten / 1024 + "KB");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             return false;
@@ -150,6 +180,7 @@ public class FileCopier {
     }
 
     public static void main(String[] args) {
+        fileCopyLimitSpeed(PathPool.A_TXT_PATH, PathPool.B_TXT_PATH);
 
     }
 }

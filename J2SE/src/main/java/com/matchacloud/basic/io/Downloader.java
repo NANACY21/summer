@@ -17,6 +17,11 @@ public class Downloader {
     public static final String IMAGE_LOCATION = "https://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E5%9B%BE%E7%89%87&step_word=&hs=0&pn=32&spn=0&di=7456461798821068801&pi=0&rn=1&tn=baiduimagedetail&is=0%2C0&istype=0&ie=utf-8&oe=utf-8&in=&cl=2&lm=-1&st=undefined&cs=715608868%2C120386985&os=2644361476%2C499078582&simid=3594895925%2C372448008&adpicid=0&lpn=0&ln=530&fr=&fmq=1739008264574_R&fm=&ic=undefined&s=undefined&hd=undefined&latest=undefined&copyright=undefined&se=&sme=&tab=0&width=undefined&height=undefined&face=undefined&ist=&jit=&cg=&bdtype=0&oriquery=&objurl=https%3A%2F%2Finews.gtimg.com%2Fom_bt%2FOZ4uJUzOr-RgpNiB_zg4x8Zi1PYW02_D9hQeOhKhyq0GAAA%2F641&fromurl=ippr_z2C%24qAzdH3FAzdH3Fgjo_z%26e3Bqq_z%26e3Bv54AzdH3F6wtgAzdH3FwAzdH3Fdad9a98mAaaJRVaa&gsm=1e&rpstart=0&rpnum=0&islist=&querylist=&nojc=undefined&dyTabStr=MCwxMiwzLDEsMiwxMyw3LDYsNSw5&lid=10009991195646139385";
 
     /**
+     * 规定文件复制最高速度为 30KB/s
+     */
+    public static final int MAX_SPEED = 30 * 1024;
+
+    /**
      * @param imageUrl    要下载的图片url
      * @param downloadDir 下载的目录位置
      * @param imgFileName 下载到本地的图片文件名称
@@ -86,7 +91,7 @@ public class Downloader {
      */
     public static boolean downloadFile(String srcPath, String downloadDir, String downloadFileName) throws IOException, NoSuchAlgorithmException {
         String destPath = downloadDir + "/" + downloadFileName;
-        boolean result = FileCopier.fileCopy(srcPath, destPath);
+        boolean result = FileCopier.fileCopyLimitSpeed(srcPath, destPath);
         if (result) {
             String srcMd5 = SecurityChecker.calculateMD5(srcPath);
             String destMd5 = SecurityChecker.calculateMD5(destPath);
@@ -98,7 +103,7 @@ public class Downloader {
     public static void main(String[] args) throws IOException, NoSuchAlgorithmException {
         //Downloader.downloadImage(IMAGE_LOCATION, PathPool.DOWNLOAD_PATH, "adc.jpg");
         //Downloader.downloadFile(PathPool.A_TXT_PATH, PathPool.DOWNLOAD_PATH, "b.txt");
-        System.out.println("a.txt的md5:" + SecurityChecker.calculateMD5(PathPool.A_TXT_PATH));
-        System.out.println("b.txt的md5:" + SecurityChecker.calculateMD5(PathPool.B_TXT_PATH));
+        //System.out.println("a.txt的md5:" + SecurityChecker.calculateMD5(PathPool.A_TXT_PATH));
+        //System.out.println("b.txt的md5:" + SecurityChecker.calculateMD5(PathPool.B_TXT_PATH));
     }
 }

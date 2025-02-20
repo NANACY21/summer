@@ -2,6 +2,8 @@ package com.matchacloud.basic.datastructure;
 
 import com.matchacloud.basic.datastructure.pojo.LinkNode;
 
+import java.util.Stack;
+
 /**
  * 单向链表
  */
@@ -9,7 +11,7 @@ public class SingleLinkedList {
     /**
      * 头节点 不存储数据
      */
-    LinkNode head;
+    private LinkNode head;
 
     /**
      * 单向链表初始化
@@ -71,7 +73,6 @@ public class SingleLinkedList {
             }
         }
     }
-
 
     /**
      * 打印单向链表
@@ -151,6 +152,28 @@ public class SingleLinkedList {
         return result;
     }
 
+    /**
+     * 单向链表反转(利用栈)
+     *
+     * @param linkedList
+     * @return
+     */
+    public static SingleLinkedList reverseList(SingleLinkedList linkedList) {
+        Stack<Integer> stack = new Stack<>();
+        LinkNode current = linkedList.head.next;
+        while (current != null) {
+            stack.push(current.data);
+            current = current.next;
+        }
+        SingleLinkedList result = new SingleLinkedList();
+        current = result.head;
+        while (!stack.isEmpty()) {
+            current.next = new LinkNode(stack.pop());
+            current = current.next;
+        }
+        return result;
+    }
+
 
     /**
      * 测试单向链表
@@ -163,13 +186,15 @@ public class SingleLinkedList {
         list.insert(3, 2);
         list.insert(4, 3);
         list.printList();
-        list.delete(2);
-        list.printList();
+        //list.delete(2);
+        //list.printList();
 //        SingleLinkedList linkedList = SingleLinkedList.createLinkedList(1, 2, 3, 4, 5);
 //        SingleLinkedList.printList(linkedList);
 //
 //        SingleLinkedList reversedLink = SingleLinkedList.reverseLink(linkedList);
 //        SingleLinkedList.printList(reversedLink);
+        SingleLinkedList reversed = SingleLinkedList.reverseList(list);
+        reversed.printList();
 
 
     }

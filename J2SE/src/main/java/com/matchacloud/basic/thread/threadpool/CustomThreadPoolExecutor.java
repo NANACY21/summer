@@ -2,13 +2,10 @@ package com.matchacloud.basic.thread.threadpool;
 import java.util.concurrent.*;
 
 /**
- * 线程池拒绝策略:
- * 1 ThreadPoolExecutor.AbortPolicy()(默认) 抛出异常 主线程会执行异常从而阻塞 主线程捕获异常!!!
- * 2 ThreadPoolExecutor.CallerRunsPolicy() 调用者直接执行任务 主线程不会阻塞
- * 3 ThreadPoolExecutor.DiscardOldestPolicy() 丢弃队列中等待最久的任务(出队) 该任务入队阻塞队列
- * 4 ThreadPoolExecutor.DiscardPolicy() 直接丢弃任务 也不会抛异常
+ * 线程池
  */
 public class CustomThreadPoolExecutor {
+
     // 核心线程数
     private static final int CORE_POOL_SIZE = 5;
     // 最大线程数
@@ -41,7 +38,8 @@ public class CustomThreadPoolExecutor {
     /**
      * 私有构造函数，防止外部实例化
      */
-    private CustomThreadPoolExecutor() {}
+    private CustomThreadPoolExecutor() {
+    }
 
     /**
      * 一些说明：
@@ -51,9 +49,10 @@ public class CustomThreadPoolExecutor {
      * CustomThreadPoolExecutor 类通常是由系统类加载器加载的，
      * 系统类加载器在应用程序的整个运行期间都存在，不会被垃圾回收，
      * 所以 CustomThreadPoolExecutor 类也不会被卸载，线程池对象会一直存在，直到应用程序结束。
-     *
-     *
+     * <p>
+     * <p>
      * 提交任务到线程池执行
+     *
      * @param task 要执行的任务
      */
     public static void execute(Runnable task) {
@@ -62,8 +61,9 @@ public class CustomThreadPoolExecutor {
 
     /**
      * 提交有返回值的任务到线程池执行
+     *
      * @param task 要执行的任务
-     * @param <T> 任务返回值的类型
+     * @param <T>  任务返回值的类型
      * @return 表示任务的 Future 对象
      */
     public static <T> Future<T> submit(Callable<T> task) {
@@ -93,6 +93,7 @@ public class CustomThreadPoolExecutor {
 
     /**
      * 检查线程池是否已关闭
+     *
      * @return 如果线程池已关闭则返回 true，否则返回 false
      */
     public static boolean isShutdown() {
@@ -101,6 +102,7 @@ public class CustomThreadPoolExecutor {
 
     /**
      * 检查线程池是否已终止
+     *
      * @return 如果线程池已终止则返回 true，否则返回 false
      */
     public static boolean isTerminated() {
@@ -110,6 +112,7 @@ public class CustomThreadPoolExecutor {
 
     /**
      * 使用方式
+     *
      * @param args
      */
     public static void main(String[] args) {
