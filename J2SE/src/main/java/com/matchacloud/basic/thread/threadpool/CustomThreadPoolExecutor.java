@@ -3,34 +3,98 @@ import java.util.concurrent.*;
 
 /**
  * 线程池
+ *
+ * 线程池7大参数的解释以及合理设置参数
  */
 public class CustomThreadPoolExecutor {
 
-    // 核心线程数
+    /**
+     * 核心线程数(常驻线程数量 默认可运行线程数量)
+     * 核心线程在创建线程池对象后不一定会立即创建
+     * 合理设置核心线程数：
+     * 1.对于CPU 密集型任务：这类任务主要消耗 CPU 资源，如进行大量的计算。
+     *   核心线程数可以设置为 CPU 核心数 + 1，这样可以充分利用 CPU 资源，
+     *   避免过多的线程切换开销。
+     *   可以通过 Runtime.getRuntime().availableProcessors() 方法获取 CPU 核心数
+     * 2.IO 密集型任务：这类任务主要涉及到大量的 I/O 操作，
+     *   如文件读写、网络请求等，线程在进行 I/O 操作时会处于等待状态，CPU 处于空闲状态。
+     *   因此，核心线程数可以设置得大一些，通常为 CPU 核心数的 2 倍，
+     *   以充分利用 CPU 在 I/O 等待期间的空闲时间
+     */
     private static final int CORE_POOL_SIZE = 5;
-    // 最大线程数
+
+    /**
+     * 最大线程数
+     * 合理设置最大线程数：
+     * 1.对于 CPU 密集型任务，最大线程数可以和核心线程数设置为相同的值，
+     *   因为过多的线程会导致频繁的线程切换，降低性能。
+     * 2.对于 IO 密集型任务，最大线程数可以适当增大，但也不宜过大，
+     *   否则会占用过多的系统资源。可以根据系统的承受能力和任务的特点进行调整。
+     */
     private static final int MAX_POOL_SIZE = 10;
-    // 线程空闲时间
+
+    /**
+     * 空闲线程存活时间
+     * 线程这么长时间不用就结束 空闲线程超过该时间就关闭结束线程
+     * 合理设置空闲线程存活时间：
+     * 1.对于任务比较频繁且执行时间较短的场景，可以将 keepAliveTime 设置得短一些，
+     *   以避免过多的空闲线程占用系统资源。
+     * 2.对于任务执行时间较长且不频繁的场景，可以将 keepAliveTime 设置得长一些，
+     *   这样当有新任务到来时，不需要频繁地创建新线程。
+     */
     private static final long KEEP_ALIVE_TIME = 60L;
-    // 时间单位
+
+    /**
+     * 时间单位
+     */
     private static final TimeUnit TIME_UNIT = TimeUnit.SECONDS;
-    // 任务队列容量
+
+    /**
+     * 任务队列容量
+     */
     private static final int QUEUE_CAPACITY = 20;
 
+    /**
+     * 线程工厂 用于创建线程
+     */
+    private static ThreadFactory threadFactory = Executors.defaultThreadFactory();
+
     // 单例的线程池实例
-    private static final ExecutorService threadPool;
+    private static final ThreadPoolExecutor threadPool;
+
 
     static {
-        // 创建一个阻塞队列用于存放任务
+        /**
+         * 创建一个阻塞队列用于存放阻塞的任务
+         * 合理的设置阻塞队列对象：
+         * 1.ArrayBlockingQueue：这是一个有界队列，需要指定队列的容量。
+         *   当任务数量可以预估，并且不希望线程池创建过多的线程时，可以使用该队列。
+         *   例如，在对系统资源使用有严格限制的场景下，
+         *   使用有界队列可以避免任务无限堆积导致系统资源耗尽。
+         * 2.LinkedBlockingQueue：这是一个无界队列（也可以指定容量），
+         *   如果不指定容量，队列可以无限增长。
+         *   当任务数量不确定，且希望线程池按照核心线程数来处理任务时，可以使用该队列。
+         *   但需要注意，如果任务提交速度远大于处理速度，可能会导致内存溢出。
+         * 3.SynchronousQueue：这是一个不存储元素的队列，
+         *   每个插入操作必须等待另一个线程的移除操作，反之亦然。
+         *   当任务执行时间较短，且希望尽快处理任务，避免任务在队列中等待时，可以使用该队列。
+         *   使用该队列时，通常需要将最大线程数设置得大一些，以处理可能到来的大量任务。
+         */
         BlockingQueue<Runnable> workQueue = new LinkedBlockingQueue<>(QUEUE_CAPACITY);
-        // 创建线程池
+        /**
+         * 创建线程池
+         *
+         * 合理指定线程池的参数：有利于充分利用系统资源、提高程序性能以及避免资源耗尽
+         *
+         */
         threadPool = new ThreadPoolExecutor(
                 CORE_POOL_SIZE,
                 MAX_POOL_SIZE,
                 KEEP_ALIVE_TIME,
                 TIME_UNIT,
                 workQueue,
-                Executors.defaultThreadFactory(),
+                threadFactory,
+                //拒绝策略 该线程池无法再执行新线程任务时的拒绝策略
                 new ThreadPoolExecutor.CallerRunsPolicy()
         );
     }
@@ -39,6 +103,40 @@ public class CustomThreadPoolExecutor {
      * 私有构造函数，防止外部实例化
      */
     private CustomThreadPoolExecutor() {
+    }
+
+    /**
+     * 线程池4种拒绝策略
+     */
+    public static void setRejectMode() {
+        /******线程池拒绝策略(再提交任务时线程池拒绝执行)******/
+
+        /**
+         * 1.默认，抛出异常，execute方法所在的线程a会捕获异常，如果catch里throw，线程a会因此终止执行
+         * 适用于：对任务丢失比较敏感的场景，开发者可以通过捕获异常来进行相应的处理。
+         */
+        RejectedExecutionHandler abortPolicy = new ThreadPoolExecutor.AbortPolicy();
+
+        /**
+         * 2.调用者直接执行任务，主线程不会阻塞
+         * 适用于：这种策略可以减缓任务提交的速度，适用于不希望任务丢失，且对系统性能要求不是特别高的场景。
+         */
+        RejectedExecutionHandler callerRunsPolicy = new ThreadPoolExecutor.CallerRunsPolicy();
+
+        /**
+         * 3.丢弃队列中等待最久的任务(出队)，该任务入队阻塞队列
+         * 适用于：对任务的时效性要求不高的场景。
+         */
+        RejectedExecutionHandler discardOldestPolicy = new ThreadPoolExecutor.DiscardOldestPolicy();
+
+        /**
+         * 4.直接丢弃任务 也不会抛异常
+         * 适用于：对任务丢失不太敏感的场景。
+         */
+        RejectedExecutionHandler discardPolicy = new ThreadPoolExecutor.DiscardPolicy();
+
+        //设置线程池拒绝策略
+        threadPool.setRejectedExecutionHandler(abortPolicy);
     }
 
     /**

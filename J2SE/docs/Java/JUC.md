@@ -220,13 +220,6 @@ Executors(工具类) 这几个类
     根据需求不断变化可同时执行线程数量 比如20个请求用该线程池 最多可能创建13个线程!!! 10个请求 最多可能创建5个线程
 
 **ThreadPoolExecutor类构造方法7个参数**
-1. int corePoolSize 核心线程数量 常驻线程数量 默认可运行线程数量
-2. int maximumPoolSize 最大线程数量
-3. Long keepAliveTime 线程存活时间 线程这么长时间不用就结束!!! 空闲线程超过该时间就关闭结束线程!!!
-4. TimeUnit unit
-5. BlockingQueue<Runnable> workQueue 阻塞队列 存放阻塞的线程
-6. ThreadFactory threadFactory 线程工厂 用于创建线程
-7. RejectedExecutionHandler handler 拒绝策略 该线程池无法再执行新线程任务时的拒绝策略
 
 **线程池工作流程**
 线程池对象执行了execute()时线程才创建  
