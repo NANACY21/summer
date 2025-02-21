@@ -21,6 +21,10 @@ import java.util.concurrent.atomic.AtomicStampedReference;
  *
  * cas一定也是某一环节是cpu原语，从而保证的原子性
  *
+ *
+ * 思考：
+ * 1.cas怎么实现线程顺序执行
+ *
  */
 public class CASTest {
     public static void main(String[] args) {
