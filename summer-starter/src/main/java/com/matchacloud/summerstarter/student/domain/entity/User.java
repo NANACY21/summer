@@ -1,6 +1,7 @@
 package com.matchacloud.summerstarter.student.domain.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 /**
@@ -8,6 +9,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
  */
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class User {
 
     private String username;
