@@ -4,6 +4,12 @@ import java.util.concurrent.CountDownLatch;
 
 /**
  * 老板线程
+ * <p>
+ * CountDownLatch实现原理：
+ * 1.基于aqs实现 aqs内部维护一个state属性实现计数器功能 state初始值=计数器的初始值
+ * 2.主线程await() 读取state是否=0 可以获取锁从而执行 否则阻塞
+ * 3.countDown() cas的方式使state--, state--后若=0 则唤醒等待的线程
+ * 4.利用 AQS 的共享锁机制来实现线程的等待和唤醒，从而达到协调多个线程执行顺序的目的
  */
 public class Boss implements Runnable {
 

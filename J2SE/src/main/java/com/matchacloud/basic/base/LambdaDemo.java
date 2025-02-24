@@ -5,6 +5,7 @@ import javax.script.ScriptException;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.Reader;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -162,5 +163,27 @@ public class LambdaDemo {
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
+	}
+
+	/**
+	 * stream流map：
+	 * map 是 Stream 接口提供的一个中间操作，用于将流中的每个元素通过一个函数进行转换，
+	 * 生成一个新的流，新流中的元素是原流元素经过函数转换后的结果
+	 */
+	public static void streamMapTest() {
+		List<Dog> dogs = new ArrayList<>();
+		for (int i = 0; i < 10; i++) {
+			int number = i + 1;
+			Dog dog = new Dog(number, "小狗" + number);
+			dogs.add(dog);
+		}
+		List<String> dogNameList = dogs.stream()
+				.map(dog -> dog.getName())
+				.collect(Collectors.toList());
+		System.out.println(dogNameList);
+	}
+
+	public static void main(String[] args) {
+		streamMapTest();
 	}
 }

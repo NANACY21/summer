@@ -12,3 +12,13 @@ GitHub/GitLab远程上SSH Keys：代表有哪些pc连接到了此远程，其中
 `pc2 - gitlab`
 
 git使用协议：ssh https 底层tcp协议
+
+
+### git命令
+1. `git checkout 分支名`：切换到已有分支
+2. `git checkout -b abc`：创建并切换到一个名为 abc 的新分支
+3. `git apply 文件名`：
+
+
+### 常见的情况
+1. 遇到代码冲突怎么解决?
