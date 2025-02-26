@@ -19,12 +19,18 @@
 
 
 #### 系统操作
-1. `sudo shutdown -P now` 关机  
-2. `sudo poweroff` 关机  
+1. `sudo shutdown -P now` 关机
+2. `sudo poweroff` 关机
 3. `sudo reboot` 重启
 4. `linux怎么查看某端口是否被占用：`
     1. `ss -tuln | grep 8080`
     2. `netstat -tuln | grep 8080`(如果输出中显示了该端口，那么说明该端口已被占用)
+5. `查看Linux中进程占用内存等信息：`
+    1. `top`
+    2. `ps`显示当前正在运行的进程列表
+    3. `pmap`
+    4. `vmstat`
+    5. `htop`
   
 
 #### 安装/下载的操作

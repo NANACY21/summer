@@ -3,6 +3,9 @@ package com.matchacloud.basic.thread.tool.countdownlatch;
 import java.util.concurrent.CountDownLatch;
 
 /**
+ * CountDownLatch：
+ * 1.等线程a b c都完成了各自的既定任务，线程d开始执行既定任务。不一定d需要使用a b c的返回值。
+ * <p>
  * 老板线程
  * <p>
  * CountDownLatch实现原理：
