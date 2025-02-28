@@ -41,13 +41,8 @@ import java.util.concurrent.locks.ReentrantLock;
 public class MySynchronized {
 
     private static final Object lock = new Object();
+
     private int a;
-
-    /**
-     *
-     */
-    ReentrantLock reentrantLock = new ReentrantLock();
-
 
     public static void a() {
 

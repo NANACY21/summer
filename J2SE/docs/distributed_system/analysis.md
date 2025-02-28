@@ -45,3 +45,20 @@
 4. 架构层面优化
     1. `负载均衡`：将请求均匀地分配到多个服务器上，避免单点故障和提高系统的可用性和性能
     2. `采用微服务架构`
+
+
+### 线上出现OOM怎么排查定位
+1. 出现超时 服务停止 服务挂掉 接口无法访问这些症状时考虑可能OOM
+2. `定位出现OOM的进程`：
+    1. OS日志
+    2. 微服务的日志
+    3. top命令查看各个进程内存占用情况
+3. `模拟OOM`写一个循环 不停add元素到list 而且不使用该list
+4. 使用Java VisualVM分析 有一个visual GC插件 安装/激活该插件 看到堆空间使用情况
+5. dump堆信息：会生成一个.hprof快照文件
+6. 安装好MAT后 使用MAT分析hprof文件 能帮助定位问题 定位代码位置
+7. 在服务器上获取堆内存dump文件：jmap -dump:format=b,file= <filename.hprof> <pid>
+   自动生成堆内存dump文件：-XX:+HeapDumpOnOutOfMemoryError  -XX:HeapDumpPath=heap/heapdump.hprof
+8. 检查代码内存泄露、大对象等
+9. 检查jvm进程堆内存大小是否合理
+10. 系统运行全局监控工具
