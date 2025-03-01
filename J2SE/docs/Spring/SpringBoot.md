@@ -105,3 +105,13 @@
 如何找到要注入的bean，`byname` 和 `bytype` 两种方式
 1. `byname` 根据唯一标识符
 2. `bytype` 通过匹配bean的类型来找到要注入的bean
+
+
+#### Springboot中servlet是线程安全吗
+1. 请求打到servlet实例，servlet为每个请求创建一个线程来处理请求
+2. 当多个线程同时访问比如写servlet实例的成员变量时，会产生线程不安全，比如这个成员变量是统计请求次数。
+3. Springboot中servlet通常是单例的
+4. 解决方案：
+    1. 使用局部变量
+    2. 同步关键字
+    3. 使用线程安全的类(成员变量可以是原子类)

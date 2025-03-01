@@ -73,6 +73,7 @@
    通过加载bean定义方法 用xml、注解扫描方式，找到代码里定义的所有bean类，放到bean定义集合中(将 Bean 的定义信息注册到BeanFactory，此时仅记录元数据，未创建实例)
 2. 实例化阶段：容器根据 Bean 定义，遍历bean定义集合，用反射调用构造函数或工厂方法create bean()创建 Bean 实例
 3. 属性注入阶段：实例创建后，Spring 依据定义通过构造函数、Setter 方法或字段注入等方式，将依赖的 Bean 或属性值注入到该 Bean
+   spring boot配置文件内容是这时候赋值给bean属性的。
 4. 初始化实例阶段
     1. 若 Bean 实现BeanNameAware等接口，Spring 会调用相应方法传递 Bean 名称、BeanFactory、ApplicationContext等
     2. 调用BeanPostProcessor的postProcessBeforeInitialization方法进行前置处理
