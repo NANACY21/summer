@@ -2,13 +2,25 @@
 1. springboot内置tomcat，整合了开发、部署、调试
 2. springboot就是把spring springmvc需要手动做的但是固定的操作都自动帮忙弄了(自动配置)，ioc容器有什么组件 就等于有该功能
 3. ioc容器里面是实例对象 getbean()默认单实例 可以改成多实例
-4. springboot启动之后 @service注解对应的类的实例自动进入ioc容器 堆空间分配内存 而不是用到service类的时候
-   但是如果该service类`使用非单例作用域`或`懒加载配置`，在首次使用时才进行实例化并放入 IOC 容器，在堆空间分配内存
+4. `类加载时机&对象实例化时机`
+    1. `对于单例且非懒加载的@Service类`：springboot启动之后 @service类 会完成bean注册、类加载、对象实例自动进入ioc容器 堆空间分配内存 而不是用到service类的时候
+    2. `对于非单例作用域或懒加载的@Service类`：springboot启动之后 @service类 会完成bean注册，在首次使用时才会类加载、进行实例化并放入 IOC 容器，在堆空间分配内存
 5. `springboot主函数`:@SpringBootApplication注解启动了自动配置、组件扫描和Spring Boot的特定配置。main方法中的SpringApplication.run则是启动了整个应用
 6. SpringBoot只会扫描主程序所在的包及其下面的子包
-7. springcloud更是让程序员不用接触Linux  
-8. 项目不上去 打成的jar文件上去 jar文件包含依赖包  
+7. springcloud更是让程序员不用接触Linux
+8. 项目不上去 打成的jar文件上去 jar文件包含依赖包
 9. 对框架的理解：框架就是让代码只关注业务，其他框架都帮忙完成
+
+
+#### springboot较springmvc的优势
+1. 自动装配无需手动配置
+2. 快速构建：springboot的依赖管理 各种starter
+   这些starter将相关的依赖和配置整合在一起，开发者只需添加相应的启动器依赖，就能快速开始开发特定功能的应用，提升效率
+3. 内置服务器
+4. 微服务支持 更适用于Springcloud
+5. 监控和管理：提供了 Actuator 模块，可方便地对应用进行监控和管理。
+   通过 Actuator 可以获取应用的各种运行时信息，如健康状态、性能指标、环境变量等，
+   还支持对应用进行动态配置和操作，如刷新配置、查看线程栈等，为应用的运维和管理提供了很大的便利
 
 
 #### springboot如此方便依赖2个机制(springboot核心组件/特性)
