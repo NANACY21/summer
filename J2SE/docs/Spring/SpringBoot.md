@@ -75,6 +75,31 @@
 
 
 #### springboot常用注解
+1. 启动类相关注解 @SpringBootApplication
+2. 配置文件相关注解
+    1. @Value
+    2. @ConfigurationProperties
+3. 控制器相关注解
+    1. @RestController @Controller 和 @ResponseBody 的组合注解，用于创建 RESTful 风格的控制器，表明该类的所有方法返回的结果都会直接作为 HTTP 响应体返回
+    2. @RequestMapping 其派生注解包括 @GetMapping、@PostMapping、@PutMapping、@DeleteMapping 等
+4. 服务层注解
+    1. @Service
+5. 数据访问层注解
+    1. @Repository
+6. 条件注解
+    1. @ConditionalOnProperty 根据配置文件中的属性值来决定是否加载某个 Bean
+    2. @ConditionalOnClass 表示只有当类路径下存在指定的类时，才会加载对应的 Bean
+    3. @ConditionalOnMissingClass 只有当类路径下不存在指定的类时，才会加载对应的 Bean
+7. 依赖注入相关
+    1. @Autowired 对构造函数、方法、字段等进行标注
+       根据类型在容器中查找匹配的 Bean 并注入。如果有多个匹配的 Bean，还可以结合 @Qualifier 注解指定具体的 Bean 名称
+    2. @Qualifier 当存在多个相同类型的 Bean 时，@Autowired 无法确定具体注入哪个 Bean，此时可以使用 @Qualifier 注解指定要注入的 Bean 的名称
+8. 切面编程相关
+    1. @Aspect 用于定义切面类，在 Spring Boot 中结合 AOP（面向切面编程）可以实现日志记录、事务管理等功能。切面类中可以定义切点（@Pointcut）和通知（如 @Before、@After、@Around 等）
+9. 事务管理相关
+    1. @Transactional 用于声明事务，可应用在方法或类上。当应用在类上时，表示该类的所有公共方法都具有事务性；应用在方法上时，仅该方法具有事务性。可以指定事务的传播行为、隔离级别、是否只读等属性
+10. 测试相关
+    1. @SpringBootTest 在 Spring Boot 项目进行集成测试时使用，它会启动整个 Spring 应用上下文，模拟应用的实际运行环境，方便对服务层、控制器层等进行测试
 
 **@Autowired和@Resource注解区别**  
 如何找到要注入的bean，`byname` 和 `bytype` 两种方式

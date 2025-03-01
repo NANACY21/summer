@@ -9,6 +9,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
+/**@Aspect:
+ * 用于定义切面类，在 Spring Boot 中结合 AOP（面向切面编程）可以实现日志记录、事务管理等功能。
+ * 切面类中可以定义切点（@Pointcut）和通知（如 @Before、@After、@Around 等）
+ */
 @Aspect
 @Component
 public class LoggingAspect {
