@@ -10,6 +10,8 @@
 7. springcloud更是让程序员不用接触Linux
 8. 项目不上去 打成的jar文件上去 jar文件包含依赖包
 9. 对框架的理解：框架就是让代码只关注业务，其他框架都帮忙完成
+10. Springboot启动就是一个jvm进程，启动后jvm内存空间会有一些占用，bean注册、类加载、实例化
+   自动装配的bean和自己的bean一般在启动后实例化占jvm堆空间
 
 
 #### springboot较springmvc的优势
