@@ -21,6 +21,17 @@ import org.springframework.transaction.annotation.Transactional;
  * 2.作用：1.进行database事务操作。2.资源管理：负责管理数据库连接等资源，在事务开始时获取连接，在事务结束时释放连接，确保资源的正确使用和回收
  * 3.主要实现类：DataSourceTransactionManager
  * 4.使用方式：1.@Transactional注解。2.编程式事务管理：通过在代码中手动获取事务管理器，手动开始事务、提交事务或回滚事务
+ * <p>
+ * springboot 事务注解什么时候会失效:
+ * 1.注解应用在非 public 方法上 这是因为 Spring AOP 基于代理模式，代理对象只能拦截 public 方法
+ * 2.当一个带有 @Transactional 注解的方法被同一个类中的另一个方法调用时，事务注解会失效。因为 Spring AOP 是基于代理模式实现的，同一类中的方法调用不会经过代理对象，从而不会触发事务管理
+ * 3.@Transactional 注解默认只对 RuntimeException 及其子类和 Error 进行回滚。如果抛出的异常不是这些类型，事务将不会回滚
+ * 一个事务方法执行抛异常了正常会回滚事务
+ * 可以通过 rollbackFor 属性指定需要回滚的异常类型来解决这个问题
+ * 4.数据库不支持事务 mysql只有 InnoDB 存储引擎支持事务
+ * 5.aop配置错误 因为事务注解基于aop 如果手动配置了aop确保配置正确
+ * 6.在多线程环境下，@Transactional 注解可能会失效。因为事务是与线程绑定的，不同的线程有不同的事务上下文。
+ * 如果在一个线程中开启了事务，在另一个线程中进行数据库操作，这些操作不会参与到该事务中
  */
 @Service
 public class UserService {

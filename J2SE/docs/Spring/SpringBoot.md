@@ -117,3 +117,12 @@
     1. 使用局部变量
     2. 同步关键字
     3. 使用线程安全的类(成员变量可以是原子类)
+
+
+#### restTemplate是什么(Spring中已不推荐使用)
+1. RestTemplate 是 Spring 框架早期用于处理 HTTP 请求的核心组件，
+   它封装了底层的 HTTP 客户端库（如 Apache HttpClient、OkHttp 等），
+   为开发者提供了统一的、简洁的 API 来发送各种类型的 HTTP 请求，如 GET、POST、PUT、DELETE 等，
+   并处理响应结果
+2. 调用api时当前线程会阻塞 同步式的 高并发性能有问题
+3. 从 Spring 5 开始，RestTemplate 已被标记为不推荐使用，Spring 推荐使用更现代、更灵活的 WebClient 来替代它。WebClient 支持异步非阻塞编程，提供了更好的响应式编程体验
