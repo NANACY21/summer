@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/user?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: xy201619
+
+# MyBatis-Plus配置
+mybatis-plus:
+  # 扫描实体类所在包
+  type-aliases-package: com.matchacloud.entity
+  # 扫描Mapper XML文件所在路径
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    # 开启驼峰命名转换
+    map-underscore-to-camel-case: true
+    # 日志打印SQL
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      # 全局默认主键类型
+      id-type: AUTO
+      # 全局默认逻辑删除值
+      logic-delete-value: 1
+      logic-not-delete-value: 0

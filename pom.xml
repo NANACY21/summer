@@ -19,6 +19,7 @@
     <modules>
         <module>J2SE</module>
         <module>summer-starter</module>
+        <module>sport-center</module>
     </modules>
 
     <properties>
