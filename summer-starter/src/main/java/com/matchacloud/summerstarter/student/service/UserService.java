@@ -36,8 +36,8 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class UserService {
 
-    @Autowired
-    private UserMapper userMapper;
+    //@Autowired
+    //private UserMapper userMapper;
 
     /**
      * 默认，如果当前存在事务，则加入该事务(db操作加入到已有事务中 不再新建事务)；如果当前没有事务，则创建一个新的事务。
@@ -45,10 +45,10 @@ public class UserService {
     @Transactional(propagation = Propagation.REQUIRED)
     public void required() {
         User user = new User();
-        int insert = userMapper.insert(user);
-        if (insert != 1) {
-            throw new RuntimeException("save fail");
-        }
+        //int insert = userMapper.insert(user);
+//        if (insert != 1) {
+//            throw new RuntimeException("save fail");
+//        }
     }
 
     /**
