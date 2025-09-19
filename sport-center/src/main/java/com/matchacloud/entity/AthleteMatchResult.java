@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
  */
 @Data
 @TableName("athlete_match_result")
-public class AthleteMatchResult {
+public class AthleteMatchResult extends BaseEntity {
 
     /**
      * 成绩ID（主键）

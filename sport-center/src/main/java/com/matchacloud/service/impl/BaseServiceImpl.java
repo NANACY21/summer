@@ -6,7 +6,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.matchacloud.mapper.MyBaseMapper;
 import com.matchacloud.service.BaseService;
-import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 import java.util.Map;
@@ -48,14 +48,6 @@ public class BaseServiceImpl<M extends MyBaseMapper<T>, T>
     }
 
     /**
-     * 根据ID查询
-     */
-    @Override
-    public T getById(Long id) {
-        return baseMapper.selectById(id);
-    }
-
-    /**
      * 新增
      */
     @Override
@@ -69,13 +61,5 @@ public class BaseServiceImpl<M extends MyBaseMapper<T>, T>
     @Override
     public boolean updateById(T entity) {
         return baseMapper.updateById(entity) > 0;
-    }
-
-    /**
-     * 删除
-     */
-    @Override
-    public boolean removeById(Long id) {
-        return baseMapper.deleteById(id) > 0;
     }
 }

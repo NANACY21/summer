@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
  */
 @Data
 @TableName("athlete") // 指定对应数据库表名
-public class Athlete {
+public class Athlete extends BaseEntity {
 
     /**
      * 主键ID

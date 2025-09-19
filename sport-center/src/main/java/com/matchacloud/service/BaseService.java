@@ -14,19 +14,4 @@ public interface BaseService<T> extends IService<T> {
 
     // 分页查询
     IPage<T> selectByPage(int pageNum, int pageSize, Map<String, Object> params);
-
-    // 查询所有
-    List<T> list();
-
-    // 根据ID查询
-    T getById(Long id);
-
-    // 新增
-    boolean save(T entity);
-
-    // 更新
-    boolean updateById(T entity);
-
-    // 删除
-    boolean removeById(Long id);
 }

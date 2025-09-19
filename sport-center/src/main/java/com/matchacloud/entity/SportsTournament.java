@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
  */
 @Data
 @TableName("sports_tournament")
-public class SportsTournament {
+public class SportsTournament extends BaseEntity {
 
     /**
      * 赛事ID（主键）

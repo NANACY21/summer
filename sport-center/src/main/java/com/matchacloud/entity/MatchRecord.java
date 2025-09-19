@@ -13,7 +13,7 @@ import java.time.LocalTime;
  */
 @Data
 @TableName("match_record")
-public class MatchRecord {
+public class MatchRecord extends BaseEntity {
 
     /**
      * 记录ID（主键）
