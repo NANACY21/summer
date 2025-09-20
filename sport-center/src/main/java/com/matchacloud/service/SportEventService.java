@@ -7,6 +7,6 @@ import com.matchacloud.entity.SportEvent;
  * 可添加运动项目相关的自定义业务方法
  */
 public interface SportEventService extends BaseService<SportEvent> {
-
+    SportEvent getSportEventById(Long id);
 
 }

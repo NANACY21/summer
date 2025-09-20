@@ -10,4 +10,6 @@ public interface AthleteService extends BaseService<Athlete> {
 
     // 示例：添加运动员特有的业务方法
     Athlete findByEvent(String event); // 根据项目查询运动员
+
+    Athlete getAthleteById(Long id);
 }
