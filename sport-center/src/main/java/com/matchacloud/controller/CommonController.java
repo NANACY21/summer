@@ -1,12 +1,11 @@
 package com.matchacloud.controller;
 
-import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.matchacloud.entity.*;
 import com.matchacloud.enums.BusiObjEnum;
 import com.matchacloud.service.*;
-import com.matchacloud.utils.FillFieldUtil;
+import com.matchacloud.utils.EntityUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -70,7 +69,6 @@ public class CommonController {
             @RequestParam(defaultValue = "1") int pageNum,
             @RequestParam(defaultValue = "10") int pageSize,
             @RequestParam Map<String, Object> params) {
-        //todo 有问题
         return getService(entityType).selectByPage(pageNum, pageSize, params);
     }
 
@@ -88,29 +86,18 @@ public class CommonController {
      * 利用Spring自动类型转换，通过反射获取具体实体类型
      */
     @PostMapping("/save/{entityType}")
-    public boolean save(@PathVariable String entityType, @RequestBody String entity) {
+    public boolean save(@PathVariable String entityType, @RequestBody String entityJson) {
         try {
-            // 1. 验证实体类型合法性
-            BusiObjEnum typeEnum = BusiObjEnum.getByCode(entityType);
-            if (typeEnum == null) {
-                throw new IllegalArgumentException("未知的实体类型: " + entityType);
-            }
+            BaseEntity baseEntity = EntityUtil.resolveToEntity(entityType, entityJson);
 
-            // 2. 验证实体类型匹配（接口参数类型与实际类型）
-            Class<? extends BaseEntity> entityClass = getEntityClass(entityType);
-            if (!entityClass.isInstance(entity)) {
-                //throw new IllegalArgumentException("实体类型不匹配，期望: " + entityClass.getSimpleName());
-            }
-            BaseEntity baseEntity = JSON.parseObject(entity, entityClass);
-
-            // 4. 获取对应服务并保存
+            // 获取对应服务并保存
             BaseService service = getService(entityType);
 
-            // 5. 强制类型转换（因泛型擦除，需手动确认类型安全）
+            // 强制类型转换（因泛型擦除，需手动确认类型安全）
             @SuppressWarnings("unchecked")
             IService<BaseEntity> targetService = (IService<BaseEntity>) service;
 
-            return targetService.save(FillFieldUtil.fillField(baseEntity));
+            return targetService.save(EntityUtil.fillCreateTime(baseEntity));
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -119,22 +106,25 @@ public class CommonController {
     }
 
     /**
-     * 获取实体类Class（与枚举对应）
+     *
      */
-    private Class<? extends BaseEntity> getEntityClass(String entityType) {
-        switch (entityType) {
-            case "SPORT_EVENT":
-                return SportEvent.class;
-            case "SPORTS_TOURNAMENT":
-                return SportsTournament.class;
-            case "MATCH_RECORD":
-                return MatchRecord.class;
-            case "ATHLETE_MATCH_RESULT":
-                return AthleteMatchResult.class;
-            case "ATHLETE":
-                return Athlete.class;
-            default:
-                return null;
+    @PostMapping("/update/{entityType}")
+    public boolean update(@PathVariable String entityType, @RequestBody String entityJson) {
+        try {
+            BaseEntity baseEntity = EntityUtil.resolveToEntity(entityType, entityJson);
+
+            // 获取对应服务并保存
+            BaseService service = getService(entityType);
+
+            // 强制类型转换（因泛型擦除，需手动确认类型安全）
+            @SuppressWarnings("unchecked")
+            IService<BaseEntity> targetService = (IService<BaseEntity>) service;
+
+            return targetService.updateById(EntityUtil.fillUpdateTime(baseEntity));
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException("更新失败: " + e.getMessage());
         }
     }
 

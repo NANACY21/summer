@@ -29,6 +29,8 @@ public class BaseServiceImpl<M extends MyBaseMapper<T>, T>
 
         // 示例：根据params中的参数动态添加查询条件（可根据实际需求扩展）
         if (params != null && !params.isEmpty()) {
+            params.remove("pageNum");
+            params.remove("pageSize");
             params.forEach((key, value) -> {
                 if (value != null && !"".equals(value.toString().trim())) {
                     queryWrapper.like(key, value); // 这里默认用like，实际可根据字段类型调整
