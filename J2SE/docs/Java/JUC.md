@@ -255,6 +255,25 @@ CompletableFuture用于实现异步回调 实现了Future接口 (未来任务)
 **何为线程安全**
 多个线程访问某个方法或对象时，无论任何方式的调用 、线程如何交替执行、不做任何同步干预的情况下，实际执行结果都能按预期程序编写的结果来反馈，那么就说是线程安全的
 
+
+JUC常见工具类总结：
+1. CountDownLatch、CyclicBarrier、Semaphore、Exchanger等辅助类
+2. 锁相关：ReadWriteLock、ReentrantReadWriteLock、StampedLock、LockSupport
+3. 原子类：AtomicInteger、AtomicIntegerArray、AtomicReference、AtomicIntegerFieldUpdater
+   LongAdder
+4. 并发集合：ConcurrentHashMap、CopyOnWriteArrayList
+   阻塞队列：BlockingQueue
+   1. ArrayBlockingQueue：有界队列，数组实现，公平 / 非公平锁
+   2. LinkedBlockingQueue：链表实现，可界 / 无界，默认无界
+   3. PriorityBlockingQueue：优先级无界阻塞队列
+   4. DelayQueue：延迟队列，元素到期才能被取出
+   5. SynchronousQueue：不存储元素，生产消费必须配对，吞吐量高
+   6. LinkedTransferQueue：增强版阻塞队列
+   非阻塞队列：
+   1. ConcurrentLinkedQueue、ConcurrentLinkedDeque
+5. 线程池相关
+
+
 **JMM(Java内存模型)**  
 
 **相关的计算机术语：**  
