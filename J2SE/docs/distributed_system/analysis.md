@@ -71,7 +71,7 @@
    2. 看请求涉及的微服务的日志有没有打印报错的日志(jvm出现OOM 日志可以看到OOM报错日志。还有一种OOM是来不及打印日志的 线程对象被回收gc了)
    3. arthas trace定位耗时在哪个方法 看该方法做了什么
    4. 如果有链路追踪工具 定位耗时点 (SkyWalking 链路看各阶段耗时)
-   5. linux检查cpu占用情况、内存占用情况、磁盘 IO% 高不高(磁盘io高考虑可能for循环查数据库)
+   5. linux `top -pid jvm进程PID` 检查cpu占用情况、内存占用情况。磁盘 IO% 高不高(磁盘io高考虑可能for循环查数据库 磁盘io高就是磁盘忙 for循环db操作会大量读写磁盘因此磁盘忙 其他请求磁盘的就会慢)
    6. JVM：`jstack 进程PID` 该命令可以看到哪个线程阻塞/等待 在哪一行代码阻塞/等待 从而定位
       1. 卡在jdbc executequery 考虑有可能存在慢sql->没索引 索引失效
       2. 卡在http-nio-xxx-exec-xx 考虑tomcat连接满了 新的客户请求就会阻塞
@@ -89,4 +89,26 @@
 
 一个接口请求慢可以引申出很多知识点，如网关、jvm、数据库调优、redis、全局链路追踪、rpc、arthas、linux命令、rpc的熔断降级。
 一个接口慢 = 整套微服务技术栈全链路缩影
+
+接口慢排查命令总结：
+1. (操作系统视角)查jvm占用cpu、物理运行内存：top -pid jvm进程PID
+2. 查磁盘IO高不高 磁盘忙不忙
+3. 获取进程PID jps -l
+4. 查看阻塞的线程 线程阻塞在了哪一行 jstack 进程PID
+   注意：正常执行的线程也会打印出来
+   RUNNABLE + 栈尾：SocketInputStream.socketRead0 ->有问题的线程
+5. (JVM 内部视角)arthas `bashboard` 可以看每一秒的快照 展示这一刻的线程列表 线程cpu利用率 以及内存使用率 gc次数以及gc耗时
+   dashboard 1 秒刷新 1 次，每次都是当前瞬间的一张 JVM 快照
+6. jvm各部分内存使用情况 gc次数/耗时 `jstat -gc PID 1000` 每秒打印一次快照
+   可以看有没有频繁fullgc 如果fullgc次数缓慢上涨 需要警觉 fullgc暴涨 需要定位问题了
+   注意：项目启动时会fullgc 这是正常现象
+7. arthas：watch trace jad dashboard
+
+
+### 线上问题排查方式
+1. 日志
+2. 分布式链路追踪
+3. arthas：watch trace jad dashboard
+
+
 `线上问题排查方式` 和 `接口慢排查方式` 大部分技术点、排查方式都是高度重合的。

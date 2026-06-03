@@ -669,7 +669,7 @@ GC的耗时相应会增加一些。一般要求低延时的可以考虑多设置
 
 ### jvm相关命令(用于jvm监控与分析 JVM 的运行状态，分析内存使用、垃圾回收情况、线程状态等)
 1. `jstat -gc` 查看当前状态下gc信息
-2. `jps` 查看当前运行的进程
+2. `jps -l` 查看当前运行的jvm进程 打印进程PID
 3. `jinfo -flag ThreadStackSize 5016` 获取某一个jvm应用的所有vm参数
 4. `jmap`
 5. `javac .java` 编译Java文件
