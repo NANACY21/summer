@@ -1,8 +1,6 @@
 package com.matchacloud.summerstarter.student.service;
 
 import com.matchacloud.summerstarter.student.domain.entity.User;
-import com.matchacloud.summerstarter.student.mapper.UserMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;

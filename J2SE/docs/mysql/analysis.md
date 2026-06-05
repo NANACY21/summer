@@ -36,7 +36,7 @@ SELECT start_time,query_time,sql_text
 FROM mysql.slow_log ORDER BY start_time DESC;
 
 
-#### 排查慢SQL
+#### 排查/改善慢SQL
 1. 判断是否阻塞
     1. `SHOW PROCESSLIST;`状态字段
     状态=Locked，表示该线程正在等待锁，可能存在阻塞情况
