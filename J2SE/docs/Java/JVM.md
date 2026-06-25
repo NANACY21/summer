@@ -635,6 +635,7 @@ GC的耗时相应会增加一些。一般要求低延时的可以考虑多设置
 
 
 ### JVM参数
+使用方式：java -XX:+PrintGCDetails -jar ***.jar(该内容一般写入start.sh脚本)  本地启动：Edit Configurations VM options 
 - `-ХХ:+PrintGCDetails` 打印垃圾回收相关信息
 - `-XX:MetaspaceSize=64m` 设置元空间大小
 - 显示程序运行过程堆栈信息的文件 叫dump文件 生成dump文件方式：

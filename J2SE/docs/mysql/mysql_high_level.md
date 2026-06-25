@@ -232,43 +232,8 @@ mysql是存储数据的数据库，最重要的是存储引擎，这里引擎的
 **至此数据库调优相关ok**
 
 
-**explain讲解(查看具体执行计划)(重点)**  
-mysql优化器会重写sql，如子查询重写为多表连接，explain看到的是重写后的sql的执行计划  
-优化器生成最终执行计划由执行器执行  
-**explain每一列的含义：**  
-`id`  
-和select关键字对应  
-对于嵌套查询有两个select关键字 有时优化器会优化成多表连接查询因此id值只有一个  
-id越大 优先级越高 越先执行  
-id每个值 表示一趟独立查询  
-`table`  
-涉及几个表 - 生成几条记录  
-`select_type`  
-和小查询对应 用于描述小查询在整体查询中扮演的角色  
-`partitions`  
-
-以下列重要：explain观察 看能读懂的经验  
-`type`
-针对单表的访问方法：system const  eq_ref ref 好  
-range index all 不好  
-`possible_key`
-可能用到的索引  
-`key`  
-实际用的索引  
-`key_len`
-主要针对联合索引 值越大越好 通过key_len可以看出联合索引用了哪个字段的索引  
-
-explain发现使用临时表 不好 最好使用索引来替代
-
-`rows` 预估读取的条数 越小越好  
-缓存 内存 磁盘 顺序io  
-`filtered` 越大越好  
-`extra`：一些额外的信息 会显示是不是文件排序 没借助到索引  
-explain的4中输出方式  
-1. 有索引不用：key:NULL、type:ALL
-2. 低效遍历索引：key:索引名、type:index
-3. 正常命中索引：type:ref/range/const + key:索引名
-至此explain相关ok!!!  
+  
+[explain相关讲解(查看具体执行计划)(重点)](./explain相关.md)
 
 
 **一些优化案例分析**
