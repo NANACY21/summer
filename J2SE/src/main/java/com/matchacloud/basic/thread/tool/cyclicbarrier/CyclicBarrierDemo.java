@@ -3,7 +3,7 @@ import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
 
 /**
- * CyclicBarrier：
+ * CyclicBarrier：案例：集齐7颗龙珠可以召唤神龙
  * 1.线程a b c执行各自任务 执行完均等待 只有a b c都执行完任务时，线程d再执行任务d，此时a b c都继续执行
  * 2.CyclicBarrier和CountDownLatch都可以实现让线程 a、b、c 都执行完任务之后，再执行线程 d 的任务。但它们的实现方式和侧重点有所不同
  */

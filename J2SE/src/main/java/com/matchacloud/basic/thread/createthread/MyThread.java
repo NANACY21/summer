@@ -1,7 +1,11 @@
 package com.matchacloud.basic.thread.createthread;
 
 /**ok
- * 创建线程（Thread对象）的3种方式
+ * 创建线程（Thread对象）的4种方式
+ * 1. 继承thread类
+ * 2. 实现runnable接口
+ * 3. 实现callable接口
+ * 4. 线程池
  * 线程的生命周期
  */
 public class MyThread extends Thread {

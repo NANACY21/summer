@@ -3,7 +3,7 @@ package com.matchacloud.basic.thread.tool.countdownlatch;
 import java.util.concurrent.CountDownLatch;
 
 /**
- * CountDownLatch：
+ * CountDownLatch：(常用于线程间通信 案例：6个同学陆续离开教室后值班同学才可以关门)
  * 实现线程的执行顺序控制 线程执行顺序编排
  * 1.等线程a b c都完成了各自的既定任务，线程d开始执行既定任务。不一定d需要使用a b c的返回值。
  * 适用场景比如：并发读取业务表数据 都读到内存后 进行数据整合

@@ -13,16 +13,24 @@ public class ThreadPoolFactory {
 
     /**
      * 缓存线程池
+     * 可以用于处理大量短期突发流量 线程池根据需求创建线程，可扩容，遇强则强
+     * 方法里也是： new ThreadPoolExecutor()
+     * 根据需求不断变化可同时执行线程数量 比如20个请求用该线程池 最多可能创建13个线程!!! 10个请求 最多可能创建5个线程
      */
     private static ExecutorService CACHED_THREAD_POOL = Executors.newCachedThreadPool();
 
     /**
      * 创建一个固定线程池 该线程池中 1000 个线程 该线程池重用固定数量的从共享无界队列中运行的线程
+     *
+     * 一池N线程 固定n线程
+     * 可以很好控制并发量 超出一定量的线程被提交时候需在队列中等待
+     * 方法里是：new ThreadPoolExecutor()
      */
     public static ExecutorService FIXED_THREAD_POOL = Executors.newFixedThreadPool(1000);
 
     /**
      * 单线程池
+     * 一个任务一个任务执行，一池一线程 方法里也是： new ThreadPoolExecutor()
      */
     private static ExecutorService SINGLE_THREAD_POOL = Executors.newSingleThreadExecutor();
 
