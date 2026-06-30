@@ -272,6 +272,13 @@ public class CustomThreadPoolExecutor {
          * 线程池工作线程出现异常会往外抛 并且销毁这个线程
          * 1. 线程加try catch 在内部捕获异常
          * 2. submit返回值 try {submit} catch{实际处理异常}
+         * <p>
+         * execute&submit区别：
+         * 1. execute:主线程拿不到任务返回值 submit:主线程拿得到任务返回值
+         * 2. execute:任务抛异常对应线程对象废弃 最终被回收 主线程无法感知任务异常
+         * submit:任务如果异常 返回结果就是"抛异常" 主线程可以感知并捕获任务异常
+         * 3.execute：任务主线程无法干预 不能取消 主线程不知道是否完成
+         * submit:可知道任务是否完成 可以取消任务
          */
 
 

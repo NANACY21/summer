@@ -30,7 +30,7 @@ public class TestJoin {
         /**join方法的重载方法
          * 等待t1线程终止，最多等2秒，join()则会一直等待线程终止，
          * 可以避免死锁
-         * 使用join方法可以使main线程和t1线程合并，即线性执行，等待t1结束，main再执行
+         * 使用join方法可以使main线程和t1线程合并，即线性执行，等待t1结束，main再从该行开始执行
          */
         t1.join(2000);
         System.out.println("主函数结束...");

@@ -19,6 +19,14 @@ package com.matchacloud.basic.thread.jmm;
  * 1.读多写少时 并发写volatile就是废物
  * 2.单一赋值
  * 3.状态标志
+ * <p>
+ * synchronized和volatile关键字区别：
+ * 1.volatile保证可见性、有序性，不保证原子性，synchronized三者同时保证
+ * 2.volatile无锁不阻塞线程 底层：内存屏障+CAS synchronized有锁阻塞线程 底层：对象监视器 Monitor 锁
+ * 3.volatile性能开销低 synchronized性能开销高
+ * 4.volatile只能修饰成员变量、静态变量 不能修饰：方法、局部变量、常量 final
+ * synchronized可修饰静态方法、实例方法、代码块，不能修饰变量
+ * 5.synchronized适合并发多写的场景 适合多步复合操作
  */
 public class VolatileDemo {
 
